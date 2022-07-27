@@ -17,27 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jjq-a8-U9w">
-                                <rect key="frame" x="87" y="187" width="240" height="522"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jjq-a8-U9w">
+                                <rect key="frame" x="87" y="64" width="240" height="778"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fn3-Hh-NZ3" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="259.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCz-Dy-YjP" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="128" width="240" height="266"/>
+                                        <rect key="frame" x="0.0" y="259.5" width="240" height="259"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OA-db-X9e" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="394" width="240" height="128"/>
+                                        <rect key="frame" x="0.0" y="518.5" width="240" height="259.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="iCz-Dy-YjP" firstAttribute="centerY" secondItem="jjq-a8-U9w" secondAttribute="centerY" id="7Bc-NX-uXt"/>
-                                    <constraint firstItem="iCz-Dy-YjP" firstAttribute="top" secondItem="jjq-a8-U9w" secondAttribute="top" constant="128" id="CsZ-SY-RCm"/>
-                                    <constraint firstItem="iCz-Dy-YjP" firstAttribute="leading" secondItem="jjq-a8-U9w" secondAttribute="leadingMargin" id="E4p-Wl-rrO"/>
+                                    <constraint firstItem="6OA-db-X9e" firstAttribute="top" secondItem="iCz-Dy-YjP" secondAttribute="bottom" id="Axi-6O-AYN"/>
+                                    <constraint firstAttribute="bottom" secondItem="6OA-db-X9e" secondAttribute="bottom" id="FF6-JK-kAl"/>
+                                    <constraint firstAttribute="trailing" secondItem="fn3-Hh-NZ3" secondAttribute="trailing" id="We7-SE-ubE"/>
+                                    <constraint firstItem="iCz-Dy-YjP" firstAttribute="top" secondItem="fn3-Hh-NZ3" secondAttribute="bottom" id="XwR-42-Zux"/>
                                     <constraint firstItem="iCz-Dy-YjP" firstAttribute="leading" secondItem="fn3-Hh-NZ3" secondAttribute="leading" id="ZXE-Hj-q1j"/>
+                                    <constraint firstAttribute="trailing" secondItem="iCz-Dy-YjP" secondAttribute="trailing" id="fxz-QN-byl"/>
+                                    <constraint firstAttribute="trailing" secondItem="6OA-db-X9e" secondAttribute="trailing" id="n7k-m9-JSb"/>
+                                    <constraint firstItem="fn3-Hh-NZ3" firstAttribute="leading" secondItem="jjq-a8-U9w" secondAttribute="leading" id="oiF-VM-ctt"/>
                                     <constraint firstItem="iCz-Dy-YjP" firstAttribute="leading" secondItem="6OA-db-X9e" secondAttribute="leading" id="x7d-LA-3EJ"/>
                                 </constraints>
                             </stackView>
@@ -45,10 +49,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jjq-a8-U9w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="8jT-kH-OKW"/>
-                            <constraint firstItem="jjq-a8-U9w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="cEy-eC-OLb"/>
-                            <constraint firstItem="jjq-a8-U9w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qPc-cB-iA7"/>
-                            <constraint firstItem="jjq-a8-U9w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sk5-ma-kQZ"/>
+                            <constraint firstItem="jjq-a8-U9w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8My-IZ-s2V"/>
+                            <constraint firstItem="jjq-a8-U9w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="RYt-bH-ZTx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jjq-a8-U9w" secondAttribute="trailing" constant="87" id="onA-xc-COT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jjq-a8-U9w" secondAttribute="bottom" constant="20" id="wx3-2S-t6u"/>
+                            <constraint firstItem="jjq-a8-U9w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yK8-Vy-yZf"/>
                         </constraints>
                     </view>
                     <connections>
