@@ -22,6 +22,7 @@
 		49A9B48F2891585D006A2C6F /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B48C2891585D006A2C6F /* Nunito-Black.ttf */; };
 		49A9B49228916095006A2C6F /* IconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B49128916095006A2C6F /* IconTextField.swift */; };
 		49A9B4942891644F006A2C6F /* IconTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B4932891644F006A2C6F /* IconTextField.xib */; };
+		49A9B4962891768D006A2C6F /* TextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B4952891768D006A2C6F /* TextFieldViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		49A9B48C2891585D006A2C6F /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
 		49A9B49128916095006A2C6F /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
 		49A9B4932891644F006A2C6F /* IconTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconTextField.xib; sourceTree = "<group>"; };
+		49A9B4952891768D006A2C6F /* TextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				49A9B49128916095006A2C6F /* IconTextField.swift */,
 				49A9B4932891644F006A2C6F /* IconTextField.xib */,
+				49A9B4952891768D006A2C6F /* TextFieldViewModel.swift */,
 			);
 			path = IconTextField;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A9B4962891768D006A2C6F /* TextFieldViewModel.swift in Sources */,
 				49A9B49228916095006A2C6F /* IconTextField.swift in Sources */,
 				49A9B46C28915130006A2C6F /* ViewController.swift in Sources */,
 				49A9B46828915130006A2C6F /* AppDelegate.swift in Sources */,

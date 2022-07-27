@@ -10,7 +10,48 @@ import UIKit
 @IBDesignable
 class IconTextField: UIView {
 
-    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBInspectable var secure: Bool {
+        get {
+            textField.isSecureTextEntry
+        }
+        set {
+            textField.isSecureTextEntry = newValue
+        }
+    }
+    
+    @IBInspectable var placeholder: String? {
+        get {
+            return textField.placeholder
+        }
+        set {
+            textField.placeholder = newValue
+//            textField.placeholder = newValue?.localized
+        }
+    }
+    
+    @IBInspectable var featuredIcon: UIImage? {
+        get {
+            return imageView.image
+        }
+        set {
+            imageView.image = newValue
+        }
+    }
+    
+    var text: String? {
+        get {
+            return textField.text
+        }
+        set {
+            textField.text = newValue
+        }
+    }
+    
+    var delegate: UITextFieldDelegate? = nil
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,7 +69,17 @@ class IconTextField: UIView {
         addSubview(viewFromXib)
     }
 
-    func configure(title: String) {
-        label.text = title
+    
+    static func create(for model: TextFieldViewModel, tag: Int = 0, secure: Bool = false) -> IconTextField {
+        let form = IconTextField(frame: CGRect(x: 0, y: 0, width: 350, height: 45))
+        form.textField.tag = tag
+        form.draw(for: model)
+        form.secure = secure
+        return form
+    }
+    
+    func draw(for model: TextFieldViewModel) {
+        featuredIcon = model.icon
+        placeholder = model.placeholder
     }
 }
