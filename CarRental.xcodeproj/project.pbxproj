@@ -20,6 +20,8 @@
 		49A9B48D2891585D006A2C6F /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B48A2891585D006A2C6F /* Nunito-Bold.ttf */; };
 		49A9B48E2891585D006A2C6F /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B48B2891585D006A2C6F /* Nunito-ExtraBold.ttf */; };
 		49A9B48F2891585D006A2C6F /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B48C2891585D006A2C6F /* Nunito-Black.ttf */; };
+		49A9B49228916095006A2C6F /* IconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B49128916095006A2C6F /* IconTextField.swift */; };
+		49A9B4942891644F006A2C6F /* IconTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B4932891644F006A2C6F /* IconTextField.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		49A9B48A2891585D006A2C6F /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		49A9B48B2891585D006A2C6F /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		49A9B48C2891585D006A2C6F /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		49A9B49128916095006A2C6F /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
+		49A9B4932891644F006A2C6F /* IconTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconTextField.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 		49A9B485289153A4006A2C6F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				49A9B4902891603F006A2C6F /* IconTextField */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -142,6 +147,15 @@
 			children = (
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		49A9B4902891603F006A2C6F /* IconTextField */ = {
+			isa = PBXGroup;
+			children = (
+				49A9B49128916095006A2C6F /* IconTextField.swift */,
+				49A9B4932891644F006A2C6F /* IconTextField.xib */,
+			);
+			path = IconTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +220,7 @@
 				49A9B48F2891585D006A2C6F /* Nunito-Black.ttf in Resources */,
 				49A9B48128915364006A2C6F /* Poppins-SemiBold.ttf in Resources */,
 				49A9B48428915364006A2C6F /* Poppins-Bold.ttf in Resources */,
+				49A9B4942891644F006A2C6F /* IconTextField.xib in Resources */,
 				49A9B48E2891585D006A2C6F /* Nunito-ExtraBold.ttf in Resources */,
 				49A9B47128915150006A2C6F /* Assets.xcassets in Resources */,
 				49A9B48328915364006A2C6F /* Poppins-Regular.ttf in Resources */,
@@ -222,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A9B49228916095006A2C6F /* IconTextField.swift in Sources */,
 				49A9B46C28915130006A2C6F /* ViewController.swift in Sources */,
 				49A9B46828915130006A2C6F /* AppDelegate.swift in Sources */,
 				49A9B46A28915130006A2C6F /* SceneDelegate.swift in Sources */,
