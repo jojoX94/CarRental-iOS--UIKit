@@ -13,6 +13,13 @@
 		49A9B46F28915131006A2C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B46D28915131006A2C6F /* Main.storyboard */; };
 		49A9B47128915150006A2C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B47028915150006A2C6F /* Assets.xcassets */; };
 		49A9B47428915150006A2C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B47228915150006A2C6F /* LaunchScreen.storyboard */; };
+		49A9B48128915364006A2C6F /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B47D28915364006A2C6F /* Poppins-SemiBold.ttf */; };
+		49A9B48228915364006A2C6F /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B47E28915364006A2C6F /* Poppins-Medium.ttf */; };
+		49A9B48328915364006A2C6F /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B47F28915364006A2C6F /* Poppins-Regular.ttf */; };
+		49A9B48428915364006A2C6F /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B48028915364006A2C6F /* Poppins-Bold.ttf */; };
+		49A9B48D2891585D006A2C6F /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B48A2891585D006A2C6F /* Nunito-Bold.ttf */; };
+		49A9B48E2891585D006A2C6F /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B48B2891585D006A2C6F /* Nunito-ExtraBold.ttf */; };
+		49A9B48F2891585D006A2C6F /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B48C2891585D006A2C6F /* Nunito-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		49A9B47028915150006A2C6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49A9B47328915150006A2C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49A9B47528915150006A2C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49A9B47D28915364006A2C6F /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		49A9B47E28915364006A2C6F /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		49A9B47F28915364006A2C6F /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		49A9B48028915364006A2C6F /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		49A9B48A2891585D006A2C6F /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		49A9B48B2891585D006A2C6F /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		49A9B48C2891585D006A2C6F /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,78 @@
 		49A9B46628915130006A2C6F /* CarRental */ = {
 			isa = PBXGroup;
 			children = (
+				49A9B489289153DD006A2C6F /* Config */,
+				49A9B488289153CD006A2C6F /* Database */,
+				49A9B487289153C5006A2C6F /* Services */,
+				49A9B486289153AD006A2C6F /* Pages */,
+				49A9B485289153A4006A2C6F /* Components */,
+				49A9B47B28915256006A2C6F /* Ressources */,
 				49A9B46728915130006A2C6F /* AppDelegate.swift */,
 				49A9B46928915130006A2C6F /* SceneDelegate.swift */,
 				49A9B46B28915130006A2C6F /* ViewController.swift */,
 				49A9B46D28915131006A2C6F /* Main.storyboard */,
-				49A9B47028915150006A2C6F /* Assets.xcassets */,
 				49A9B47228915150006A2C6F /* LaunchScreen.storyboard */,
 				49A9B47528915150006A2C6F /* Info.plist */,
 			);
 			path = CarRental;
+			sourceTree = "<group>";
+		};
+		49A9B47B28915256006A2C6F /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				49A9B47028915150006A2C6F /* Assets.xcassets */,
+				49A9B47C28915261006A2C6F /* fonts */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		49A9B47C28915261006A2C6F /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				49A9B48C2891585D006A2C6F /* Nunito-Black.ttf */,
+				49A9B48A2891585D006A2C6F /* Nunito-Bold.ttf */,
+				49A9B48B2891585D006A2C6F /* Nunito-ExtraBold.ttf */,
+				49A9B48028915364006A2C6F /* Poppins-Bold.ttf */,
+				49A9B47E28915364006A2C6F /* Poppins-Medium.ttf */,
+				49A9B47F28915364006A2C6F /* Poppins-Regular.ttf */,
+				49A9B47D28915364006A2C6F /* Poppins-SemiBold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		49A9B485289153A4006A2C6F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		49A9B486289153AD006A2C6F /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		49A9B487289153C5006A2C6F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		49A9B488289153CD006A2C6F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		49A9B489289153DD006A2C6F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +203,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A9B47428915150006A2C6F /* LaunchScreen.storyboard in Resources */,
+				49A9B48F2891585D006A2C6F /* Nunito-Black.ttf in Resources */,
+				49A9B48128915364006A2C6F /* Poppins-SemiBold.ttf in Resources */,
+				49A9B48428915364006A2C6F /* Poppins-Bold.ttf in Resources */,
+				49A9B48E2891585D006A2C6F /* Nunito-ExtraBold.ttf in Resources */,
 				49A9B47128915150006A2C6F /* Assets.xcassets in Resources */,
+				49A9B48328915364006A2C6F /* Poppins-Regular.ttf in Resources */,
 				49A9B46F28915131006A2C6F /* Main.storyboard in Resources */,
+				49A9B48D2891585D006A2C6F /* Nunito-Bold.ttf in Resources */,
+				49A9B48228915364006A2C6F /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
