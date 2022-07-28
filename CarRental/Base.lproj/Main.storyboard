@@ -48,23 +48,35 @@
                                 <rect key="frame" x="30" y="400.5" width="354" height="442"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to join" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gno-1o-W2e">
-                                        <rect key="frame" x="0.0" y="30" width="354" height="34"/>
+                                        <rect key="frame" x="0.0" y="30" width="354" height="14"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                         <color key="textColor" systemColor="systemGray3Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbf-cZ-d0K" userLabel="actionContainer">
-                                        <rect key="frame" x="20" y="101" width="314" height="311"/>
+                                        <rect key="frame" x="20" y="81" width="314" height="331"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="DJ8-oy-6dz">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="311"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DJ8-oy-6dz">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="331"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGZ-1O-uiS" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="155.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="103.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email address"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="featuredIcon" value="carbon_email"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7lt-c2-eGF" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="113.5" width="314" height="104"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="featuredIcon" value="ri_lock-password-fill"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWP-bG-JOu" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="155.5" width="314" height="155.5"/>
+                                                        <rect key="frame" x="0.0" y="227.5" width="314" height="103.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                 </subviews>
@@ -126,6 +138,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="carbon_email" width="24" height="24"/>
+        <image name="ri_lock-password-fill" width="24" height="24"/>
         <image name="white_car" width="340" height="340"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
