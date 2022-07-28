@@ -13,7 +13,7 @@ class Button: UIButton {
     fileprivate var titleString: String?
     fileprivate var titleColorStored: UIColor?
     fileprivate var backgroundColorStored: UIColor?
-    fileprivate var _titleSize: CGFloat = 15
+    fileprivate var _titleSize: CGFloat = 14
     
     @IBInspectable var background: UIColor? {
         get {
@@ -32,7 +32,7 @@ class Button: UIButton {
         set {
             let newValue = newValue
             titleString = newValue
-            let font = UIFont(name: "Roboto-Bold", size: _titleSize)
+            let font = UIFont(name: "Poppins-Regular", size: _titleSize)
             if let currentAttributed = currentAttributedTitle, let newValue = newValue, let font = font {
                 let mutableAttributed = NSMutableAttributedString(attributedString: currentAttributed)
                 let range = NSRange(location: 0, length: currentAttributed.length)
@@ -69,7 +69,7 @@ class Button: UIButton {
         set {
             _titleSize = newValue
             if let currentAttributed = currentAttributedTitle {
-                let font = UIFont(name: "Roboto-Bold", size: newValue)
+                let font = UIFont(name: "Poppins-Regular", size: newValue)
                 if let font = font {
                     let mutableAttributed = NSMutableAttributedString(attributedString: currentAttributed)
                     mutableAttributed.addAttributes([.font: font], range: NSRange(location: 0, length: currentAttributed.length))
@@ -90,7 +90,7 @@ class Button: UIButton {
             let mutableAttributeString = NSMutableAttributedString()
             
             let attrs: [NSAttributedString.Key: Any] = [
-                .font: UIFont(name: "Roboto-Bold", size: _titleSize)!,
+                .font: UIFont(name: "Poppins-Regular", size: _titleSize)!,
                 .foregroundColor: titleColorStored ?? UIColor.white
             ]
             mutableAttributeString.mutableString.setString(titleString)
@@ -98,7 +98,8 @@ class Button: UIButton {
             setAttributedTitle(mutableAttributeString, for: .normal)
         }
         
-        layer.cornerRadius = bounds.height/2
+//        layer.cornerRadius = bounds.height/2
+        layer.cornerRadius = 10
         layer.masksToBounds = true
         
         if #unavailable(iOS 15) {
