@@ -10,6 +10,8 @@
 		491A57442892697400D05BB6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A57432892697400D05BB6 /* UIView+Extension.swift */; };
 		491A574728927DF100D05BB6 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A574628927DF100D05BB6 /* Button.swift */; };
 		491A574928927E8300D05BB6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A574828927E8300D05BB6 /* UIColor+Extension.swift */; };
+		491A57522892B79500D05BB6 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A57512892B79500D05BB6 /* KeychainWrapper.swift */; };
+		491A57542892B8C100D05BB6 /* KeychainAttrRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A57532892B8C100D05BB6 /* KeychainAttrRepresentable.swift */; };
 		49A9B46828915130006A2C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46728915130006A2C6F /* AppDelegate.swift */; };
 		49A9B46A28915130006A2C6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46928915130006A2C6F /* SceneDelegate.swift */; };
 		49A9B46C28915130006A2C6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46B28915130006A2C6F /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 		491A57432892697400D05BB6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		491A574628927DF100D05BB6 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		491A574828927E8300D05BB6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		491A57512892B79500D05BB6 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		491A57532892B8C100D05BB6 /* KeychainAttrRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAttrRepresentable.swift; sourceTree = "<group>"; };
 		49A9B46428915130006A2C6F /* CarRental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRental.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A9B46728915130006A2C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A9B46928915130006A2C6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,15 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		491A57502892B76F00D05BB6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				491A57512892B79500D05BB6 /* KeychainWrapper.swift */,
+				491A57532892B8C100D05BB6 /* KeychainAttrRepresentable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		49A9B45B28915130006A2C6F = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 		49A9B46628915130006A2C6F /* CarRental */ = {
 			isa = PBXGroup;
 			children = (
+				491A57502892B76F00D05BB6 /* Utils */,
 				491A57422892695000D05BB6 /* Extensions */,
 				49A9B489289153DD006A2C6F /* Config */,
 				49A9B488289153CD006A2C6F /* Database */,
@@ -265,10 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491A57522892B79500D05BB6 /* KeychainWrapper.swift in Sources */,
 				491A574728927DF100D05BB6 /* Button.swift in Sources */,
 				491A57442892697400D05BB6 /* UIView+Extension.swift in Sources */,
 				49A9B4962891768D006A2C6F /* TextFieldViewModel.swift in Sources */,
 				49A9B49228916095006A2C6F /* IconTextField.swift in Sources */,
+				491A57542892B8C100D05BB6 /* KeychainAttrRepresentable.swift in Sources */,
 				49A9B46C28915130006A2C6F /* ViewController.swift in Sources */,
 				49A9B46828915130006A2C6F /* AppDelegate.swift in Sources */,
 				49A9B46A28915130006A2C6F /* SceneDelegate.swift in Sources */,
