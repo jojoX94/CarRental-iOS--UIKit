@@ -7,9 +7,13 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
@@ -126,6 +130,35 @@
                                     <constraint firstItem="LZa-cn-Jx0" firstAttribute="centerX" secondItem="Tui-Ox-qHz" secondAttribute="centerX" id="vUT-TQ-QAG"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LTX-4l-fRT">
+                                <rect key="frame" x="30" y="325.5" width="354" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="mK7-1j-0J0"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Sx-0w-ndd">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VLI-FF-AEq">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QTt-Cp-J6x">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brands" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTb-CP-E88">
+                                <rect key="frame" x="30" y="297.5" width="354" height="28"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbl-ie-Ded" userLabel="Separator">
                                 <rect key="frame" x="0.0" y="445.5" width="414" height="5"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
@@ -133,27 +166,23 @@
                                     <constraint firstAttribute="height" constant="5" id="G8t-Zv-YUi"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ims-WJ-6x3">
-                                <rect key="frame" x="0.0" y="265.5" width="111" height="200"/>
-                                <color key="backgroundColor" systemColor="systemCyanColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="l4N-AU-MiJ"/>
-                                    <constraint firstAttribute="width" constant="111" id="vY1-nV-Ne4"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8l6-tp-la7"/>
                         <color key="backgroundColor" white="0.93592658009999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="LTX-4l-fRT" firstAttribute="centerY" secondItem="Tui-Ox-qHz" secondAttribute="bottom" id="3CU-Re-A5g"/>
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="centerY" secondItem="xh6-6o-EJa" secondAttribute="centerY" id="AhA-mT-yan"/>
-                            <constraint firstItem="Ims-WJ-6x3" firstAttribute="centerY" secondItem="Tui-Ox-qHz" secondAttribute="bottom" id="RNx-9N-y31"/>
+                            <constraint firstItem="tTb-CP-E88" firstAttribute="leading" secondItem="LTX-4l-fRT" secondAttribute="leading" id="Q5A-ux-jyf"/>
                             <constraint firstItem="Tui-Ox-qHz" firstAttribute="leading" secondItem="8l6-tp-la7" secondAttribute="leading" id="Rcd-Y4-5Th"/>
-                            <constraint firstItem="Ims-WJ-6x3" firstAttribute="leading" secondItem="Tui-Ox-qHz" secondAttribute="leading" id="TX2-Wf-aVH"/>
+                            <constraint firstItem="LTX-4l-fRT" firstAttribute="leading" secondItem="8l6-tp-la7" secondAttribute="leading" constant="30" id="SSz-Ia-eAg"/>
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="trailing" secondItem="8l6-tp-la7" secondAttribute="trailing" id="ZLz-Vy-rLJ"/>
                             <constraint firstItem="Tui-Ox-qHz" firstAttribute="trailing" secondItem="8l6-tp-la7" secondAttribute="trailing" id="aLS-nv-KRx"/>
+                            <constraint firstItem="tTb-CP-E88" firstAttribute="bottom" secondItem="LTX-4l-fRT" secondAttribute="top" id="hGH-8z-fbo"/>
+                            <constraint firstItem="8l6-tp-la7" firstAttribute="trailing" secondItem="LTX-4l-fRT" secondAttribute="trailing" constant="30" id="hIW-AF-3bg"/>
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="leading" secondItem="8l6-tp-la7" secondAttribute="leading" id="inR-6h-QF1"/>
                             <constraint firstItem="Tui-Ox-qHz" firstAttribute="top" secondItem="xh6-6o-EJa" secondAttribute="top" id="kl5-oh-zHo"/>
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="top" secondItem="Tui-Ox-qHz" secondAttribute="bottom" constant="80" id="nRE-Ld-Ga2"/>
+                            <constraint firstItem="tTb-CP-E88" firstAttribute="trailing" secondItem="LTX-4l-fRT" secondAttribute="trailing" id="qTc-s4-A38"/>
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="centerX" secondItem="xh6-6o-EJa" secondAttribute="centerX" id="us5-jt-Hhn"/>
                         </constraints>
                     </view>
@@ -393,9 +422,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
