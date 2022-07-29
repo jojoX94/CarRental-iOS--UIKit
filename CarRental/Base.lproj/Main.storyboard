@@ -59,14 +59,22 @@
             </objects>
             <point key="canvasLocation" x="539.13043478260875" y="225.66964285714283"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="s6x-EJ-9Hn">
             <objects>
-                <tabBarController storyboardIdentifier="TabBar" id="Igq-Gt-e9A" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" id="Igq-Gt-e9A" customClass="TabBarViewController" customModule="CarRental" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SON-Zy-gjg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemYellowColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="bjJ-OX-ET5" kind="relationship" relationship="viewControllers" id="3MQ-kc-cWy"/>
@@ -77,11 +85,11 @@
             </objects>
             <point key="canvasLocation" x="1520" y="226"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Cz0-g0-Sgh">
             <objects>
                 <navigationController id="bjJ-OX-ET5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2Hg-ay-ORZ"/>
+                    <tabBarItem key="tabBarItem" image="dashicons_screenoptions" id="2Hg-ay-ORZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eyj-ce-9W0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -101,20 +109,65 @@
                     <view key="view" contentMode="scaleToFill" id="xh6-6o-EJa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tui-Ox-qHz" userLabel="TopContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="365.5"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LZa-cn-Jx0">
+                                        <rect key="frame" x="30" y="157.5" width="354" height="51"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LZa-cn-Jx0" secondAttribute="trailing" constant="30" id="0QN-Gn-7hs"/>
+                                    <constraint firstItem="LZa-cn-Jx0" firstAttribute="leading" secondItem="Tui-Ox-qHz" secondAttribute="leading" constant="30" id="bt5-Ay-Sbp"/>
+                                    <constraint firstItem="LZa-cn-Jx0" firstAttribute="centerY" secondItem="Tui-Ox-qHz" secondAttribute="centerY" id="hTn-yT-fRY"/>
+                                    <constraint firstItem="LZa-cn-Jx0" firstAttribute="centerX" secondItem="Tui-Ox-qHz" secondAttribute="centerX" id="vUT-TQ-QAG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbl-ie-Ded" userLabel="Separator">
+                                <rect key="frame" x="0.0" y="445.5" width="414" height="5"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="G8t-Zv-YUi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ims-WJ-6x3">
+                                <rect key="frame" x="0.0" y="265.5" width="111" height="200"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="l4N-AU-MiJ"/>
+                                    <constraint firstAttribute="width" constant="111" id="vY1-nV-Ne4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8l6-tp-la7"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.93592658009999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tbl-ie-Ded" firstAttribute="centerY" secondItem="xh6-6o-EJa" secondAttribute="centerY" id="AhA-mT-yan"/>
+                            <constraint firstItem="Ims-WJ-6x3" firstAttribute="centerY" secondItem="Tui-Ox-qHz" secondAttribute="bottom" id="RNx-9N-y31"/>
+                            <constraint firstItem="Tui-Ox-qHz" firstAttribute="leading" secondItem="8l6-tp-la7" secondAttribute="leading" id="Rcd-Y4-5Th"/>
+                            <constraint firstItem="Ims-WJ-6x3" firstAttribute="leading" secondItem="Tui-Ox-qHz" secondAttribute="leading" id="TX2-Wf-aVH"/>
+                            <constraint firstItem="tbl-ie-Ded" firstAttribute="trailing" secondItem="8l6-tp-la7" secondAttribute="trailing" id="ZLz-Vy-rLJ"/>
+                            <constraint firstItem="Tui-Ox-qHz" firstAttribute="trailing" secondItem="8l6-tp-la7" secondAttribute="trailing" id="aLS-nv-KRx"/>
+                            <constraint firstItem="tbl-ie-Ded" firstAttribute="leading" secondItem="8l6-tp-la7" secondAttribute="leading" id="inR-6h-QF1"/>
+                            <constraint firstItem="Tui-Ox-qHz" firstAttribute="top" secondItem="xh6-6o-EJa" secondAttribute="top" id="kl5-oh-zHo"/>
+                            <constraint firstItem="tbl-ie-Ded" firstAttribute="top" secondItem="Tui-Ox-qHz" secondAttribute="bottom" constant="80" id="nRE-Ld-Ga2"/>
+                            <constraint firstItem="tbl-ie-Ded" firstAttribute="centerX" secondItem="xh6-6o-EJa" secondAttribute="centerX" id="us5-jt-Hhn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gus-Rs-THb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vrz-LV-I4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3490" y="226"/>
+            <point key="canvasLocation" x="3489.8550724637685" y="225.66964285714283"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Hgp-Zl-AWq">
             <objects>
                 <navigationController id="0Jf-hw-zVH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="edT-ST-gko"/>
+                    <tabBarItem key="tabBarItem" image="ci_settings-filled" id="edT-ST-gko"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7fK-og-U3K">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -135,7 +188,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="yZp-rO-Z24"/>
-                        <color key="backgroundColor" systemColor="systemCyanColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ak3-6P-MZF"/>
                 </viewController>
@@ -182,13 +234,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbf-cZ-d0K" userLabel="actionContainer">
-                                        <rect key="frame" x="20" y="101" width="314" height="345"/>
+                                        <rect key="frame" x="20" y="101" width="314" height="380"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="DJ8-oy-6dz">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="345"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="380"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGZ-1O-uiS" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="59"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="72"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email address"/>
@@ -196,7 +248,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7lt-c2-eGF" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="77" width="314" height="57.5"/>
+                                                        <rect key="frame" x="0.0" y="90" width="314" height="72"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
@@ -204,7 +256,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dca-Bn-c5A" customClass="Button" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="152.5" width="314" height="72"/>
+                                                        <rect key="frame" x="0.0" y="180" width="314" height="72"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
@@ -226,13 +278,13 @@
                                                         </connections>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BW-fv-cnp">
-                                                        <rect key="frame" x="0.0" y="242.5" width="314" height="20"/>
+                                                        <rect key="frame" x="0.0" y="270" width="314" height="20"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-Gg-AWY" customClass="Button" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="280.5" width="314" height="64.5"/>
+                                                        <rect key="frame" x="0.0" y="308" width="314" height="72"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
@@ -332,6 +384,8 @@
     </scenes>
     <resources>
         <image name="carbon_email" width="24" height="24"/>
+        <image name="ci_settings-filled" width="30" height="30"/>
+        <image name="dashicons_screenoptions" width="30" height="30"/>
         <image name="ri_lock-password-fill" width="24" height="24"/>
         <image name="white_car" width="340" height="340"/>
         <namedColor name="primary">
@@ -345,6 +399,12 @@
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

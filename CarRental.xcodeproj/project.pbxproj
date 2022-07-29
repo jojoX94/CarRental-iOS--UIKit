@@ -16,6 +16,7 @@
 		491A57582892BC4B00D05BB6 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A57572892BC4B00D05BB6 /* Defaults.swift */; };
 		491A575B2892BCE200D05BB6 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A575A2892BCE200D05BB6 /* VC.swift */; };
 		491A575D2892CADA00D05BB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A575C2892CADA00D05BB6 /* HomeViewController.swift */; };
+		499260602893B2CE00414280 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992605F2893B2CE00414280 /* TabBarViewController.swift */; };
 		49A9B46828915130006A2C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46728915130006A2C6F /* AppDelegate.swift */; };
 		49A9B46A28915130006A2C6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46928915130006A2C6F /* SceneDelegate.swift */; };
 		49A9B46C28915130006A2C6F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46B28915130006A2C6F /* AuthViewController.swift */; };
@@ -44,6 +45,7 @@
 		491A57572892BC4B00D05BB6 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		491A575A2892BCE200D05BB6 /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		491A575C2892CADA00D05BB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = CarRental/Container/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		4992605F2893B2CE00414280 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = CarRental/Container/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
 		49A9B46428915130006A2C6F /* CarRental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRental.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A9B46728915130006A2C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A9B46928915130006A2C6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			children = (
 				491A57552892BB9300D05BB6 /* LaunchViewController.swift */,
 				491A575C2892CADA00D05BB6 /* HomeViewController.swift */,
+				4992605F2893B2CE00414280 /* TabBarViewController.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				491A57562892BB9300D05BB6 /* LaunchViewController.swift in Sources */,
 				491A57582892BC4B00D05BB6 /* Defaults.swift in Sources */,
 				49A9B46A28915130006A2C6F /* SceneDelegate.swift in Sources */,
+				499260602893B2CE00414280 /* TabBarViewController.swift in Sources */,
 				491A574928927E8300D05BB6 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
