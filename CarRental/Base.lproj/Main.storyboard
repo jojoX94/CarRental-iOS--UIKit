@@ -175,6 +175,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gzc-Av-3fD">
+                                <rect key="frame" x="30" y="518.5" width="354" height="294.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Dmq-W5-lIP">
+                                        <rect key="frame" x="0.0" y="44.5" width="354" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dmq-W5-lIP" id="UKq-c8-LBv">
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8l6-tp-la7"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -187,6 +201,9 @@
                             <constraint firstItem="LL7-08-BiS" firstAttribute="top" secondItem="tbl-ie-Ded" secondAttribute="bottom" constant="30" id="TLX-YG-s8c"/>
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="trailing" secondItem="8l6-tp-la7" secondAttribute="trailing" id="ZLz-Vy-rLJ"/>
                             <constraint firstItem="Tui-Ox-qHz" firstAttribute="trailing" secondItem="8l6-tp-la7" secondAttribute="trailing" id="aLS-nv-KRx"/>
+                            <constraint firstItem="gzc-Av-3fD" firstAttribute="leading" secondItem="LL7-08-BiS" secondAttribute="leading" id="fNm-OO-jEc"/>
+                            <constraint firstItem="8l6-tp-la7" firstAttribute="bottom" secondItem="gzc-Av-3fD" secondAttribute="bottom" id="fWq-en-nt6"/>
+                            <constraint firstItem="gzc-Av-3fD" firstAttribute="top" secondItem="LL7-08-BiS" secondAttribute="bottom" constant="10" id="gls-5M-E7K"/>
                             <constraint firstItem="tTb-CP-E88" firstAttribute="bottom" secondItem="LTX-4l-fRT" secondAttribute="top" constant="-9" id="hGH-8z-fbo"/>
                             <constraint firstItem="8l6-tp-la7" firstAttribute="trailing" secondItem="LTX-4l-fRT" secondAttribute="trailing" constant="30" id="hIW-AF-3bg"/>
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="leading" secondItem="8l6-tp-la7" secondAttribute="leading" id="inR-6h-QF1"/>
@@ -194,12 +211,14 @@
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="top" secondItem="Tui-Ox-qHz" secondAttribute="bottom" constant="80" id="nRE-Ld-Ga2"/>
                             <constraint firstItem="LL7-08-BiS" firstAttribute="leading" secondItem="LTX-4l-fRT" secondAttribute="leading" id="ocA-6d-Z3Y"/>
                             <constraint firstItem="tTb-CP-E88" firstAttribute="trailing" secondItem="LTX-4l-fRT" secondAttribute="trailing" id="qTc-s4-A38"/>
+                            <constraint firstItem="gzc-Av-3fD" firstAttribute="trailing" secondItem="LTX-4l-fRT" secondAttribute="trailing" id="tdH-Kx-6NY"/>
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="centerX" secondItem="xh6-6o-EJa" secondAttribute="centerX" id="us5-jt-Hhn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gus-Rs-THb"/>
                     <connections>
                         <outlet property="collectionView" destination="LTX-4l-fRT" id="ME9-bY-oFL"/>
+                        <outlet property="tableView" destination="gzc-Av-3fD" id="rkZ-cL-pMG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vrz-LV-I4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
