@@ -12,9 +12,12 @@ class BrandCollectionViewCell: UICollectionViewCell {
     static let identifier = "BrandCollectionViewCell"
     
     @IBOutlet var img: UIImageView!
+    @IBOutlet var container: UIView!
+    
     
     public func configure(imageName: String) {
         img?.image = UIImage(named: imageName)
+//        container.dropShadow()
     }
     
     static func nib() -> UINib {

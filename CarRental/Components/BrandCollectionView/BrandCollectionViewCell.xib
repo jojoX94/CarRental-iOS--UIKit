@@ -20,35 +20,52 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfR-zD-gcD">
                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pde-W8-jVT">
-                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pde-W8-jVT">
+                                <rect key="frame" x="15" y="15" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CGb-np-zTW"/>
+                                    <constraint firstAttribute="width" constant="50" id="ytU-aE-EXU"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Pde-W8-jVT" secondAttribute="bottom" id="PTo-bi-5Jf"/>
-                            <constraint firstItem="Pde-W8-jVT" firstAttribute="top" secondItem="zfR-zD-gcD" secondAttribute="top" id="bAV-eL-na6"/>
-                            <constraint firstItem="Pde-W8-jVT" firstAttribute="leading" secondItem="zfR-zD-gcD" secondAttribute="leading" id="q8G-7O-wNj"/>
-                            <constraint firstAttribute="trailing" secondItem="Pde-W8-jVT" secondAttribute="trailing" id="tAe-w4-aH0"/>
+                            <constraint firstItem="Pde-W8-jVT" firstAttribute="centerY" secondItem="zfR-zD-gcD" secondAttribute="centerY" id="0Cl-pI-ojG"/>
+                            <constraint firstAttribute="height" constant="80" id="Ad1-ad-guy"/>
+                            <constraint firstAttribute="width" constant="80" id="Wph-C0-hIR"/>
+                            <constraint firstItem="Pde-W8-jVT" firstAttribute="centerX" secondItem="zfR-zD-gcD" secondAttribute="centerX" id="aC7-JK-kDP"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" systemColor="systemGray5Color"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="zfR-zD-gcD" secondAttribute="bottom" id="Bgp-rZ-Tuc"/>
-                <constraint firstItem="zfR-zD-gcD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tSJ-ZK-1ZP"/>
-                <constraint firstAttribute="trailing" secondItem="zfR-zD-gcD" secondAttribute="trailing" id="tm9-Uq-wrx"/>
-                <constraint firstItem="zfR-zD-gcD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zVm-l8-Kdg"/>
+                <constraint firstAttribute="bottom" secondItem="zfR-zD-gcD" secondAttribute="bottom" id="W8w-VB-wdg"/>
+                <constraint firstItem="zfR-zD-gcD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hhO-hk-6Vf"/>
+                <constraint firstAttribute="trailing" secondItem="zfR-zD-gcD" secondAttribute="trailing" id="orG-TZ-gdz"/>
+                <constraint firstItem="zfR-zD-gcD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yg8-a4-vGR"/>
             </constraints>
+            <size key="customSize" width="97" height="87"/>
             <connections>
+                <outlet property="container" destination="zfR-zD-gcD" id="0lJ-zC-mCG"/>
                 <outlet property="img" destination="Pde-W8-jVT" id="6gl-Hq-XQv"/>
             </connections>
-            <point key="canvasLocation" x="132" y="88"/>
+            <point key="canvasLocation" x="144.20289855072465" y="90.066964285714278"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -22,17 +22,25 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
         collectionView.register(BrandCollectionViewCell.nib(), forCellWithReuseIdentifier: BrandCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        collectionView.showsHorizontalScrollIndicator = false
     }
  
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Brands.count
+        return 10
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let model = Brands[indexPath.item]
+//        let model = Brands[indexPath.item]
         let cv = collectionView.dequeueReusableCell(withReuseIdentifier: BrandCollectionViewCell.identifier, for: indexPath) as! BrandCollectionViewCell
-        cv.configure(imageName: "lambo.png")
+        switch indexPath.item {
+        case 1: cv.configure(imageName: "lambo.png")
+        case 2: cv.configure(imageName: "bmw.png")
+        case 3: cv.configure(imageName: "benz.png")
+        default:
+            cv.configure(imageName: "porshe.png")
+        }
 //        cv.configure(imageName: model.imageName)
         return cv
     }
