@@ -14,6 +14,9 @@
         <array key="Poppins-Bold.ttf">
             <string>Poppins-Bold</string>
         </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
@@ -166,6 +169,12 @@
                                     <constraint firstAttribute="height" constant="5" id="G8t-Zv-YUi"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot deals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LL7-08-BiS">
+                                <rect key="frame" x="30" y="480.5" width="95" height="28"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8l6-tp-la7"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,6 +184,7 @@
                             <constraint firstItem="tTb-CP-E88" firstAttribute="leading" secondItem="LTX-4l-fRT" secondAttribute="leading" id="Q5A-ux-jyf"/>
                             <constraint firstItem="Tui-Ox-qHz" firstAttribute="leading" secondItem="8l6-tp-la7" secondAttribute="leading" id="Rcd-Y4-5Th"/>
                             <constraint firstItem="LTX-4l-fRT" firstAttribute="leading" secondItem="8l6-tp-la7" secondAttribute="leading" constant="30" id="SSz-Ia-eAg"/>
+                            <constraint firstItem="LL7-08-BiS" firstAttribute="top" secondItem="tbl-ie-Ded" secondAttribute="bottom" constant="30" id="TLX-YG-s8c"/>
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="trailing" secondItem="8l6-tp-la7" secondAttribute="trailing" id="ZLz-Vy-rLJ"/>
                             <constraint firstItem="Tui-Ox-qHz" firstAttribute="trailing" secondItem="8l6-tp-la7" secondAttribute="trailing" id="aLS-nv-KRx"/>
                             <constraint firstItem="tTb-CP-E88" firstAttribute="bottom" secondItem="LTX-4l-fRT" secondAttribute="top" constant="-9" id="hGH-8z-fbo"/>
@@ -182,6 +192,7 @@
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="leading" secondItem="8l6-tp-la7" secondAttribute="leading" id="inR-6h-QF1"/>
                             <constraint firstItem="Tui-Ox-qHz" firstAttribute="top" secondItem="xh6-6o-EJa" secondAttribute="top" id="kl5-oh-zHo"/>
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="top" secondItem="Tui-Ox-qHz" secondAttribute="bottom" constant="80" id="nRE-Ld-Ga2"/>
+                            <constraint firstItem="LL7-08-BiS" firstAttribute="leading" secondItem="LTX-4l-fRT" secondAttribute="leading" id="ocA-6d-Z3Y"/>
                             <constraint firstItem="tTb-CP-E88" firstAttribute="trailing" secondItem="LTX-4l-fRT" secondAttribute="trailing" id="qTc-s4-A38"/>
                             <constraint firstItem="tbl-ie-Ded" firstAttribute="centerX" secondItem="xh6-6o-EJa" secondAttribute="centerX" id="us5-jt-Hhn"/>
                         </constraints>
@@ -235,16 +246,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dt1-P8-iy9" userLabel="Separator">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dt1-P8-iy9" userLabel="Separator">
                                 <rect key="frame" x="0.0" y="400" width="414" height="5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="4J0-3U-NJp"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83S-Vj-Jfk" userLabel="topContainer">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83S-Vj-Jfk" userLabel="topContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="white_car" translatesAutoresizingMaskIntoConstraints="NO" id="Zak-mR-I5K">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_car" translatesAutoresizingMaskIntoConstraints="NO" id="Zak-mR-I5K">
                                         <rect key="frame" x="54" y="30" width="306" height="340"/>
                                     </imageView>
                                 </subviews>
@@ -256,7 +267,7 @@
                                     <constraint firstItem="Zak-mR-I5K" firstAttribute="top" secondItem="83S-Vj-Jfk" secondAttribute="top" constant="30" id="x1F-r4-tgb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oEf-CB-7K1" userLabel="bottomContainer">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEf-CB-7K1" userLabel="bottomContainer">
                                 <rect key="frame" x="30" y="355" width="354" height="442"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to join" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gno-1o-W2e">
@@ -365,7 +376,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAK-Mu-5ia">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAK-Mu-5ia">
                                 <rect key="frame" x="114" y="827" width="186.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Have an account? Sign in"/>

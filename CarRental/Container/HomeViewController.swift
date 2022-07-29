@@ -13,6 +13,7 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     
     @IBOutlet var collectionView: UICollectionView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadBrandsList()
