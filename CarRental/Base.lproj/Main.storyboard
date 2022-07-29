@@ -187,6 +187,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gus-Rs-THb"/>
+                    <connections>
+                        <outlet property="collectionView" destination="LTX-4l-fRT" id="ME9-bY-oFL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vrz-LV-I4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

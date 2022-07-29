@@ -17,6 +17,9 @@
 		491A575B2892BCE200D05BB6 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A575A2892BCE200D05BB6 /* VC.swift */; };
 		491A575D2892CADA00D05BB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A575C2892CADA00D05BB6 /* HomeViewController.swift */; };
 		499260602893B2CE00414280 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992605F2893B2CE00414280 /* TabBarViewController.swift */; };
+		4992606F2893CC6A00414280 /* BrandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992606E2893CC6A00414280 /* BrandViewModel.swift */; };
+		499260732893D72800414280 /* BrandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499260712893D72800414280 /* BrandCollectionViewCell.swift */; };
+		499260742893D72800414280 /* BrandCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499260722893D72800414280 /* BrandCollectionViewCell.xib */; };
 		49A9B46828915130006A2C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46728915130006A2C6F /* AppDelegate.swift */; };
 		49A9B46A28915130006A2C6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46928915130006A2C6F /* SceneDelegate.swift */; };
 		49A9B46C28915130006A2C6F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46B28915130006A2C6F /* AuthViewController.swift */; };
@@ -46,6 +49,9 @@
 		491A575A2892BCE200D05BB6 /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		491A575C2892CADA00D05BB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = CarRental/Container/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		4992605F2893B2CE00414280 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = CarRental/Container/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
+		4992606E2893CC6A00414280 /* BrandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewModel.swift; sourceTree = "<group>"; };
+		499260712893D72800414280 /* BrandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewCell.swift; sourceTree = "<group>"; };
+		499260722893D72800414280 /* BrandCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandCollectionViewCell.xib; sourceTree = "<group>"; };
 		49A9B46428915130006A2C6F /* CarRental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRental.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A9B46728915130006A2C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A9B46928915130006A2C6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +118,31 @@
 			path = Container;
 			sourceTree = "<group>";
 		};
+		4992606C2893CC2C00414280 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4992606D2893CC4600414280 /* Brands */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4992606D2893CC4600414280 /* Brands */ = {
+			isa = PBXGroup;
+			children = (
+				4992606E2893CC6A00414280 /* BrandViewModel.swift */,
+			);
+			path = Brands;
+			sourceTree = "<group>";
+		};
+		499260702893D6FF00414280 /* BrandCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				499260712893D72800414280 /* BrandCollectionViewCell.swift */,
+				499260722893D72800414280 /* BrandCollectionViewCell.xib */,
+			);
+			path = BrandCollectionView;
+			sourceTree = "<group>";
+		};
 		49A9B45B28915130006A2C6F = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +162,7 @@
 		49A9B46628915130006A2C6F /* CarRental */ = {
 			isa = PBXGroup;
 			children = (
+				4992606C2893CC2C00414280 /* Models */,
 				491A57592892BCC400D05BB6 /* Container */,
 				491A57502892B76F00D05BB6 /* Utils */,
 				491A57422892695000D05BB6 /* Extensions */,
@@ -176,6 +208,7 @@
 		49A9B485289153A4006A2C6F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				499260702893D6FF00414280 /* BrandCollectionView */,
 				491A574528927DA200D05BB6 /* Buttons */,
 				49A9B4902891603F006A2C6F /* IconTextField */,
 			);
@@ -283,6 +316,7 @@
 			files = (
 				49A9B47428915150006A2C6F /* LaunchScreen.storyboard in Resources */,
 				49A9B48F2891585D006A2C6F /* Nunito-Black.ttf in Resources */,
+				499260742893D72800414280 /* BrandCollectionViewCell.xib in Resources */,
 				49A9B48128915364006A2C6F /* Poppins-SemiBold.ttf in Resources */,
 				49A9B48428915364006A2C6F /* Poppins-Bold.ttf in Resources */,
 				49A9B4942891644F006A2C6F /* IconTextField.xib in Resources */,
@@ -306,6 +340,8 @@
 				491A574728927DF100D05BB6 /* Button.swift in Sources */,
 				491A57442892697400D05BB6 /* UIView+Extension.swift in Sources */,
 				49A9B4962891768D006A2C6F /* TextFieldViewModel.swift in Sources */,
+				4992606F2893CC6A00414280 /* BrandViewModel.swift in Sources */,
+				499260732893D72800414280 /* BrandCollectionViewCell.swift in Sources */,
 				49A9B49228916095006A2C6F /* IconTextField.swift in Sources */,
 				491A575D2892CADA00D05BB6 /* HomeViewController.swift in Sources */,
 				491A57542892B8C100D05BB6 /* KeychainAttrRepresentable.swift in Sources */,

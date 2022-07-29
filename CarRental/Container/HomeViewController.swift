@@ -7,17 +7,34 @@
 
 import UIKit
 
-class HomeViewController: VC {
-
+class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    var Brands: [BrandViewModel] = [BrandViewModel(imageName: "lambo-removebg-preview 2.png"),BrandViewModel(imageName: "lambo-removebg-preview 2.png"),BrandViewModel(imageName: "lambo-removebg-preview 2.png"),BrandViewModel(imageName: "lambo-removebg-preview 2.png")]
+    
+    @IBOutlet var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.setHidesBackButton(true, animated: true)
+        loadBrandsList()
     }
     
+    func loadBrandsList() {
+        collectionView.register(BrandCollectionViewCell.nib(), forCellWithReuseIdentifier: BrandCollectionViewCell.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+    }
+ 
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Brands.count
+    }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationItem.setHidesBackButton(true, animated: true)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let model = Brands[indexPath.item]
+        let cv = collectionView.dequeueReusableCell(withReuseIdentifier: BrandCollectionViewCell.identifier, for: indexPath) as! BrandCollectionViewCell
+        cv.configure(imageName: "lambo.png")
+//        cv.configure(imageName: model.imageName)
+        return cv
     }
 
     /*
