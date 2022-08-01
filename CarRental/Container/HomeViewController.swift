@@ -107,7 +107,6 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
         tableViewTitle.isHidden = true
         collectionTitle.textColor = .black
         animateView(collectionView)
-       
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -126,6 +125,12 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 260.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "CarDetailViewController") as? CarDetailViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 

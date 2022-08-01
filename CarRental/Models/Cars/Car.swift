@@ -13,3 +13,10 @@ struct CarViewModel {
     var price: String
     var imageName: String
 }
+
+
+struct CarFeatureViewModel {
+    var title: String
+    var subtitle: String
+    var imageName: String
+}

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490E28752897D34300E45E93 /* CarFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490E28742897D34300E45E93 /* CarFeatureView.swift */; };
+		490E28772897D36700E45E93 /* CarFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490E28762897D36700E45E93 /* CarFeatureView.xib */; };
+		490E28792897F93B00E45E93 /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490E28782897F93B00E45E93 /* CarDetailViewController.swift */; };
 		491A57442892697400D05BB6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A57432892697400D05BB6 /* UIView+Extension.swift */; };
 		491A574728927DF100D05BB6 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A574628927DF100D05BB6 /* Button.swift */; };
 		491A574928927E8300D05BB6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A574828927E8300D05BB6 /* UIColor+Extension.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		490E28742897D34300E45E93 /* CarFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFeatureView.swift; sourceTree = "<group>"; };
+		490E28762897D36700E45E93 /* CarFeatureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarFeatureView.xib; sourceTree = "<group>"; };
+		490E28782897F93B00E45E93 /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
 		491A57432892697400D05BB6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		491A574628927DF100D05BB6 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		491A574828927E8300D05BB6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -89,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490E28732897D2B400E45E93 /* CarFeatureView */ = {
+			isa = PBXGroup;
+			children = (
+				490E28742897D34300E45E93 /* CarFeatureView.swift */,
+				490E28762897D36700E45E93 /* CarFeatureView.xib */,
+			);
+			path = CarFeatureView;
+			sourceTree = "<group>";
+		};
 		491A57422892695000D05BB6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +247,7 @@
 		49A9B485289153A4006A2C6F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				490E28732897D2B400E45E93 /* CarFeatureView */,
 				4992607528940BF300414280 /* CarTableViewCell */,
 				499260702893D6FF00414280 /* BrandCollectionViewCell */,
 				491A574528927DA200D05BB6 /* Buttons */,
@@ -246,6 +262,7 @@
 				491A57552892BB9300D05BB6 /* LaunchViewController.swift */,
 				491A575C2892CADA00D05BB6 /* HomeViewController.swift */,
 				4992605F2893B2CE00414280 /* TabBarViewController.swift */,
+				490E28782897F93B00E45E93 /* CarDetailViewController.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -341,6 +358,7 @@
 			files = (
 				49A9B47428915150006A2C6F /* LaunchScreen.storyboard in Resources */,
 				49A9B48F2891585D006A2C6F /* Nunito-Black.ttf in Resources */,
+				490E28772897D36700E45E93 /* CarFeatureView.xib in Resources */,
 				499260742893D72800414280 /* BrandCollectionViewCell.xib in Resources */,
 				49A9B48128915364006A2C6F /* Poppins-SemiBold.ttf in Resources */,
 				49A9B48428915364006A2C6F /* Poppins-Bold.ttf in Resources */,
@@ -366,6 +384,8 @@
 				491A574728927DF100D05BB6 /* Button.swift in Sources */,
 				491A57442892697400D05BB6 /* UIView+Extension.swift in Sources */,
 				49A9B4962891768D006A2C6F /* TextFieldViewModel.swift in Sources */,
+				490E28752897D34300E45E93 /* CarFeatureView.swift in Sources */,
+				490E28792897F93B00E45E93 /* CarDetailViewController.swift in Sources */,
 				4992606F2893CC6A00414280 /* BrandViewModel.swift in Sources */,
 				499260732893D72800414280 /* BrandCollectionViewCell.swift in Sources */,
 				49A9B49228916095006A2C6F /* IconTextField.swift in Sources */,
