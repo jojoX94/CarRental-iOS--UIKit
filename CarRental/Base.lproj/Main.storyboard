@@ -222,9 +222,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="Gus-Rs-THb"/>
                     <connections>
+                        <outlet property="TopContainer" destination="Tui-Ox-qHz" id="MYQ-3F-tWf"/>
+                        <outlet property="TopContainerBottomConstraint" destination="nRE-Ld-Ga2" id="e05-4j-wBE"/>
+                        <outlet property="TopContainerTopConstraint" destination="kl5-oh-zHo" id="bI4-Io-n1h"/>
+                        <outlet property="collectionTitle" destination="tTb-CP-E88" id="gYd-Pp-3vb"/>
+                        <outlet property="collectionTitleBottom" destination="hGH-8z-fbo" id="TEZ-JO-uaI"/>
                         <outlet property="collectionView" destination="LTX-4l-fRT" id="ME9-bY-oFL"/>
+                        <outlet property="collectionViewCenterY" destination="3CU-Re-A5g" id="UjA-Kl-hWp"/>
                         <outlet property="searchBar" destination="LZa-cn-Jx0" id="t4n-iR-Avm"/>
                         <outlet property="tableView" destination="gzc-Av-3fD" id="rkZ-cL-pMG"/>
+                        <outlet property="tableViewTitle" destination="LL7-08-BiS" id="wn5-Eu-Cf8"/>
+                        <outlet property="tableViewTitleTop" destination="TLX-YG-s8c" id="d8B-Y4-PYc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vrz-LV-I4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

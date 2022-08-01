@@ -15,8 +15,18 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    // View for animation
+    @IBOutlet weak var TopContainer: UIView!
+    @IBOutlet weak var collectionTitle: UILabel!
+    @IBOutlet weak var tableViewTitle: UILabel!
     
-
+    // Constraint for animation
+    @IBOutlet weak var TopContainerBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var TopContainerTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var collectionViewCenterY: NSLayoutConstraint!
+    @IBOutlet weak var collectionTitleBottom: NSLayoutConstraint!
+    @IBOutlet weak var tableViewTitleTop: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +73,28 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
 //        cv.configure(imageName: model.imageName)
         return cv
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        NSLayoutConstraint.deactivate([
+            TopContainerBottomConstraint,
+            TopContainerTopConstraint,
+            collectionViewCenterY,
+            collectionTitleBottom,
+            tableViewTitleTop
+        ])
+        NSLayoutConstraint.activate([
+            TopContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            TopContainer.heightAnchor.constraint(equalToConstant: 70.0),
+            collectionTitle.topAnchor.constraint(equalTo: TopContainer.bottomAnchor, constant: 10),
+            collectionView.topAnchor.constraint(equalTo: collectionTitle.bottomAnchor, constant: 10),
+            tableViewTitle.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 30)
+        ])
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+            self.TopContainer.backgroundColor = .clear
+        }
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         10
@@ -94,3 +126,5 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     */
 
 }
+
+
