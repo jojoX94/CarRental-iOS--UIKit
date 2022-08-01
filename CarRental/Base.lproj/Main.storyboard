@@ -233,6 +233,7 @@
                         <outlet property="tableView" destination="gzc-Av-3fD" id="rkZ-cL-pMG"/>
                         <outlet property="tableViewTitle" destination="LL7-08-BiS" id="wn5-Eu-Cf8"/>
                         <outlet property="tableViewTitleTop" destination="TLX-YG-s8c" id="d8B-Y4-PYc"/>
+                        <outlet property="tableViewTop" destination="gls-5M-E7K" id="4RI-UA-vx1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vrz-LV-I4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

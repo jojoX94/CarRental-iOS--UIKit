@@ -26,7 +26,10 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     @IBOutlet weak var collectionViewCenterY: NSLayoutConstraint!
     @IBOutlet weak var collectionTitleBottom: NSLayoutConstraint!
     @IBOutlet weak var tableViewTitleTop: NSLayoutConstraint!
+    @IBOutlet weak var tableViewTop: NSLayoutConstraint!
     
+    // Local Variable
+    var animateIsDone = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,26 +77,37 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
         return cv
     }
     
+    fileprivate func animateView(_ collectionView: UICollectionView) {
+        if !animateIsDone {
+            NSLayoutConstraint.deactivate([
+                TopContainerBottomConstraint,
+                TopContainerTopConstraint,
+                collectionViewCenterY,
+                collectionTitleBottom,
+                tableViewTitleTop,
+                tableViewTop
+            ])
+            NSLayoutConstraint.activate([
+                TopContainer.topAnchor.constraint(equalTo: view.topAnchor, constant: 60.0),
+                TopContainer.heightAnchor.constraint(equalToConstant: 70.0),
+                collectionTitle.topAnchor.constraint(equalTo: TopContainer.bottomAnchor, constant: 10),
+                collectionView.topAnchor.constraint(equalTo: collectionTitle.bottomAnchor, constant: 10),
+                tableView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 30)
+            ])
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+                self.TopContainer.backgroundColor = .clear
+            }
+            animateIsDone = true
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        NSLayoutConstraint.deactivate([
-            TopContainerBottomConstraint,
-            TopContainerTopConstraint,
-            collectionViewCenterY,
-            collectionTitleBottom,
-            tableViewTitleTop
-        ])
-        NSLayoutConstraint.activate([
-            TopContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            TopContainer.heightAnchor.constraint(equalToConstant: 70.0),
-            collectionTitle.topAnchor.constraint(equalTo: TopContainer.bottomAnchor, constant: 10),
-            collectionView.topAnchor.constraint(equalTo: collectionTitle.bottomAnchor, constant: 10),
-            tableViewTitle.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 30)
-        ])
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-            self.TopContainer.backgroundColor = .clear
-        }
+        tableViewTitle.isHidden = true
+        collectionTitle.textColor = .black
+        animateView(collectionView)
+       
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
