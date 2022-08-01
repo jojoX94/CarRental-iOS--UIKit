@@ -70,7 +70,7 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 233.0
+        return 260.0
     }
     /*
     // MARK: - Navigation
