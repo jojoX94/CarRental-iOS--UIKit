@@ -13,12 +13,21 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initView()
         loadBrandsList()
         loadCarList()
+    }
+    
+    fileprivate func initView() {
+        searchBar.searchTextField.backgroundColor = .clear
+        self.dismissKeyboard()
     }
     
     func loadBrandsList() {
@@ -72,6 +81,8 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 260.0
     }
+    
+
     /*
     // MARK: - Navigation
 
