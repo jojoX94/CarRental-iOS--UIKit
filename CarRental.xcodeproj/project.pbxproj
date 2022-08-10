@@ -61,11 +61,11 @@
 		491A574828927E8300D05BB6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		491A57512892B79500D05BB6 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		491A57532892B8C100D05BB6 /* KeychainAttrRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAttrRepresentable.swift; sourceTree = "<group>"; };
-		491A57552892BB9300D05BB6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchViewController.swift; path = CarRental/Utils/LaunchViewController.swift; sourceTree = SOURCE_ROOT; };
+		491A57552892BB9300D05BB6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchViewController.swift; path = CarRental/Pages/LaunchViewController.swift; sourceTree = SOURCE_ROOT; };
 		491A57572892BC4B00D05BB6 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		491A575A2892BCE200D05BB6 /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
-		491A575C2892CADA00D05BB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = CarRental/Container/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
-		4992605F2893B2CE00414280 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = CarRental/Container/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
+		491A575C2892CADA00D05BB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = CarRental/Pages/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		4992605F2893B2CE00414280 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = CarRental/Pages/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
 		4992606E2893CC6A00414280 /* BrandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewModel.swift; sourceTree = "<group>"; };
 		499260712893D72800414280 /* BrandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewCell.swift; sourceTree = "<group>"; };
 		499260722893D72800414280 /* BrandCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -275,9 +275,9 @@
 		49A9B486289153AD006A2C6F /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				4992605F2893B2CE00414280 /* TabBarViewController.swift */,
 				491A57552892BB9300D05BB6 /* LaunchViewController.swift */,
 				491A575C2892CADA00D05BB6 /* HomeViewController.swift */,
-				4992605F2893B2CE00414280 /* TabBarViewController.swift */,
 				490E28782897F93B00E45E93 /* CarDetailViewController.swift */,
 			);
 			path = Pages;
