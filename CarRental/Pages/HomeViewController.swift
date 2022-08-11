@@ -21,18 +21,55 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     @IBOutlet weak var tableViewTitle: UILabel!
     
     // Constraint for animation
-    @IBOutlet weak var TopContainerBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var TopContainerTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var collectionViewCenterY: NSLayoutConstraint!
-    @IBOutlet weak var collectionTitleBottom: NSLayoutConstraint!
-    @IBOutlet weak var tableViewTitleTop: NSLayoutConstraint!
-    @IBOutlet weak var tableViewTop: NSLayoutConstraint!
+    @IBOutlet var TopContainer_TConstr: NSLayoutConstraint!
+    @IBOutlet var TopContainer_BConstr: NSLayoutConstraint!
+    @IBOutlet var CollectionView_CYConstr: NSLayoutConstraint!
+    @IBOutlet var CollectionView_HConstr: NSLayoutConstraint!
+    @IBOutlet var CollectionTille_BConstr: NSLayoutConstraint!
+    @IBOutlet var TableViewTitle_TConstr: NSLayoutConstraint!
+    @IBOutlet var TableView_TConstr: NSLayoutConstraint!
     
     // Local Variable
     var animateIsDone = false
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        if animateIsDone {
+            tableViewTitle.isHidden = false
+            collectionTitle.isHidden = false
+            
+            
+            NSLayoutConstraint.deactivate([
+                TopContainer.topAnchor.constraint(equalTo: view.topAnchor, constant: 60.0),
+                TopContainer.heightAnchor.constraint(equalToConstant: 70.0),
+                collectionView.topAnchor.constraint(equalTo: TopContainer.bottomAnchor, constant: 10),
+                tableView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 30)
+            ])
+            NSLayoutConstraint.activate([
+                TopContainer_TConstr,
+                TopContainer_BConstr,
+                CollectionView_CYConstr,
+                CollectionView_HConstr,
+                CollectionTille_BConstr,
+                TableViewTitle_TConstr,
+                TableView_TConstr,
+            ])
+            if CollectionView_HConstr.constant == 80 {
+                
+            } else {
+                print(CollectionView_HConstr.constant)
+            }
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+            animateIsDone = false
+        }
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.isPagingEnabled = false
         initView()
         loadBrandsList()
         loadCarList()
@@ -77,26 +114,25 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
         return cv
     }
     
-    fileprivate func animateView(_ collectionView: UICollectionView) {
+    fileprivate func animateView() {
         if !animateIsDone {
             NSLayoutConstraint.deactivate([
-                TopContainerBottomConstraint,
-                TopContainerTopConstraint,
-                collectionViewCenterY,
-                collectionTitleBottom,
-                tableViewTitleTop,
-                tableViewTop
+                TopContainer_BConstr,
+                TopContainer_TConstr,
+                CollectionView_CYConstr,
+                CollectionTille_BConstr,
+                TableViewTitle_TConstr,
+                TableView_TConstr
             ])
             NSLayoutConstraint.activate([
                 TopContainer.topAnchor.constraint(equalTo: view.topAnchor, constant: 60.0),
                 TopContainer.heightAnchor.constraint(equalToConstant: 70.0),
-                collectionTitle.topAnchor.constraint(equalTo: TopContainer.bottomAnchor, constant: 10),
-                collectionView.topAnchor.constraint(equalTo: collectionTitle.bottomAnchor, constant: 10),
+                collectionView.topAnchor.constraint(equalTo: TopContainer.bottomAnchor, constant: 10),
                 tableView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 30)
             ])
             UIView.animate(withDuration: 0.3) {
                 self.view.layoutIfNeeded()
-                self.TopContainer.backgroundColor = .clear
+//                self.TopContainer.backgroundColor = .clear
             }
             animateIsDone = true
         }
@@ -105,8 +141,8 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         tableViewTitle.isHidden = true
-        collectionTitle.textColor = .black
-        animateView(collectionView)
+        collectionTitle.isHidden = true
+        animateView()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
