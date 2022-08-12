@@ -7,11 +7,15 @@
 
 import UIKit
 
+
 class LaunchViewController: VC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+        
+        
 //        let keychain = KeychainWrapper.standard
 //        let pushUserId = keychain.string(forKey: Defaults.pushUserId)
 //        

@@ -6,17 +6,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        populateCars()
         
         // if user is logged in before
         if let loggedUsername = UserDefaults.standard.string(forKey: "username") {
@@ -71,6 +73,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    fileprivate func populateCars() {
+        let realm = try! Realm()
+        let cars = realm.objects(Car.self)
+        if cars.count == 0 {
+            try! realm.write() {
+                let def: [Car] = Car.defaultCars
+                for car in def {
+                    realm.add(car)
+                }
+            }
+        }
+    }
 
 }
 

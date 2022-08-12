@@ -20,9 +20,10 @@ class CarTableViewCell: UITableViewCell {
     }
     
     public func configure(model: CarViewModel) {
-        brandLabel.text = model.brand
+        brandLabel.text = model.brand.uppercased()
         typeLabel.text = model.type
-        priceLabel.text = model.price
+        priceLabel.text = "$" + model.price
+        img.downloaded(from: model.imageName)
     }
     
     override func awakeFromNib() {
