@@ -30,6 +30,10 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     // Local Variable
     var animateIsDone = false
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
 //        removeAnimation()
     }
@@ -60,7 +64,7 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     }
  
     /*
-        Collection view => Brand'lists
+        Begin Collection view => Brand'lists
      */
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -91,7 +95,7 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     
     /*
         End Of Collection view
-        Table view => Car'lists
+        Begin Table view => Car'lists
      */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         10
@@ -120,7 +124,7 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
 
     /*
         End of tableView
-        Function private :)
+        Begin Function private :)
      */
     
     // Remove Animation after view disappear
