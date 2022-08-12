@@ -25,8 +25,6 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     @IBOutlet var TopContainer_BConstr: NSLayoutConstraint!
     @IBOutlet var CollectionView_CYConstr: NSLayoutConstraint!
     @IBOutlet var CollectionView_HConstr: NSLayoutConstraint!
-    @IBOutlet var CollectionTille_BConstr: NSLayoutConstraint!
-    @IBOutlet var TableViewTitle_TConstr: NSLayoutConstraint!
     @IBOutlet var TableView_TConstr: NSLayoutConstraint!
     
     // Local Variable
@@ -50,8 +48,6 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
                 TopContainer_BConstr,
                 CollectionView_CYConstr,
                 CollectionView_HConstr,
-                CollectionTille_BConstr,
-                TableViewTitle_TConstr,
                 TableView_TConstr,
             ])
             if CollectionView_HConstr.constant == 80 {
@@ -120,8 +116,6 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
                 TopContainer_BConstr,
                 TopContainer_TConstr,
                 CollectionView_CYConstr,
-                CollectionTille_BConstr,
-                TableViewTitle_TConstr,
                 TableView_TConstr
             ])
             NSLayoutConstraint.activate([

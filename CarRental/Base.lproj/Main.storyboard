@@ -223,10 +223,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Gus-Rs-THb"/>
                     <connections>
-                        <outlet property="CollectionTille_BConstr" destination="TLX-YG-s8c" id="j6i-yN-9V9"/>
                         <outlet property="CollectionView_CYConstr" destination="3CU-Re-A5g" id="ujp-3g-fQI"/>
                         <outlet property="CollectionView_HConstr" destination="mK7-1j-0J0" id="WSm-Mf-25F"/>
-                        <outlet property="TableViewTitle_TConstr" destination="gls-5M-E7K" id="dGl-64-efz"/>
                         <outlet property="TableView_TConstr" destination="gls-5M-E7K" id="qgV-b2-ecR"/>
                         <outlet property="TopContainer" destination="Tui-Ox-qHz" id="MYQ-3F-tWf"/>
                         <outlet property="TopContainer_BConstr" destination="nRE-Ld-Ga2" id="8PT-4A-3tA"/>
