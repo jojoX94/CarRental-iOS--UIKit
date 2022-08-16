@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: VC{
     
     var Brands: [BrandViewModel] = [BrandViewModel(imageName: "lambo-removebg-preview 2.png"),BrandViewModel(imageName: "lambo-removebg-preview 2.png"),BrandViewModel(imageName: "lambo-removebg-preview 2.png"),BrandViewModel(imageName: "lambo-removebg-preview 2.png")]
     
@@ -67,69 +67,6 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
     }
- 
-    /*
-        Begin Collection view => Brand'lists
-     */
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let model = Brands[indexPath.item]
-        let cv = collectionView.dequeueReusableCell(withReuseIdentifier: BrandCollectionViewCell.identifier, for: indexPath) as! BrandCollectionViewCell
-        switch indexPath.item {
-        case 1: cv.configure(imageName: "lambo.png")
-        case 2: cv.configure(imageName: "bmw.png")
-        case 3: cv.configure(imageName: "benz.png")
-        default:
-            cv.configure(imageName: "porshe.png")
-        }
-//        cv.configure(imageName: model.imageName)
-        return cv
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        tableViewTitle.isHidden = true
-        collectionTitle.isHidden = true
-        animateView()
-    }
-
-    
-    /*
-        End Of Collection view
-        Begin Table view => Car'lists
-     */
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cars.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CarTableViewCell.identifier, for: indexPath) as! CarTableViewCell
-        let car = cars[indexPath.row]
-        
-        cell.configure(model: CarViewModel(type: car.car_model, brand: car.car_brand, price: car.rent_prize, imageName: car.car_image))
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 260.0
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "CarDetailViewController") as? CarDetailViewController {
-            navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-    
-
-    /*
-        End of tableView
-        Begin Function private :)
-     */
     
     // Remove Animation after view disappear
     fileprivate func removeAnimation() {
@@ -188,3 +125,59 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
 }
 
 
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let model = Brands[indexPath.item]
+        let cv = collectionView.dequeueReusableCell(withReuseIdentifier: BrandCollectionViewCell.identifier, for: indexPath) as! BrandCollectionViewCell
+        switch indexPath.item {
+        case 1: cv.configure(imageName: "lambo.png")
+        case 2: cv.configure(imageName: "bmw.png")
+        case 3: cv.configure(imageName: "benz.png")
+        default:
+            cv.configure(imageName: "porshe.png")
+        }
+//        cv.configure(imageName: model.imageName)
+        return cv
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        tableViewTitle.isHidden = true
+        collectionTitle.isHidden = true
+        animateView()
+    }
+    
+}
+
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        cars.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CarTableViewCell.identifier, for: indexPath) as! CarTableViewCell
+        let car = cars[indexPath.row]
+        
+        cell.configure(model: CarViewModel(type: car.car_model, brand: car.car_brand, price: car.rent_prize, imageName: car.car_image))
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 260.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "CarDetailViewController") as? CarDetailViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
