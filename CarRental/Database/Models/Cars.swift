@@ -53,17 +53,17 @@ class Car: Object {
     
     // Default value for tests
     static let defaultCars = [
-        Car(car_image: "https://cdn.jdpower.com/models/320x240/2022-bmw-4series.jpg", car_number: "YDH-234", car_brand: "bmw", car_model: "4 series", car_status: "", rent_prize: "249"),
-        Car(car_image: "https://cdn.jdpower.com/models/320x240/2022-bmw-i4.jpg", car_number: "YDH-234", car_brand: "bmw", car_model: "i4", car_status: "", rent_prize: "103"),
-        Car(car_image: "https://cdn.jdpower.com/models/320x240/2022-bmw-z4.jpg", car_number: "YDH-234", car_brand: "bmw", car_model: "z4", car_status: "", rent_prize: "249"),
-        Car(car_image: "https://cdn.jdpower.com/models/320x240/2022-bmw-x4m.jpg", car_number: "YDH-234", car_brand: "bmw", car_model: "x4m", car_status: "", rent_prize: "143"),
-        Car(car_image: "https://cdn.jdpower.com/models/320x240/2022-bmw-m3.jpg", car_number: "YDH-234", car_brand: "bmw", car_model: "m3", car_status: "", rent_prize: "249"),
-        Car(car_image: "https://cdn.jdpower.com/models/320x240/2022-bmw-x3m.jpg", car_number: "YDH-234", car_brand: "bmw", car_model: "x3m", car_status: "", rent_prize: "249"),
-        Car(car_image: "https://cdn.jdpower.com/models/320x240/2022-bmw-x3m.jpg", car_number: "YDH-234", car_brand: "audi", car_model: "r8-coupe", car_status: "", rent_prize: "249"),
+        Car(car_image: "https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2022BMC74_640/2022BMC740017_640_01.png", car_number: "YDH-234", car_brand: "bmw", car_model: "4 series", car_status: "", rent_prize: "249"),
+        Car(car_image: "https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2022BMCA1_640/2022BMCA10014_640_01.png", car_number: "YDH-234", car_brand: "bmw", car_model: "i4", car_status: "", rent_prize: "103"),
+        Car(car_image: "https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2021BMC24_640/2021BMC240001_640_01.png", car_number: "YDH-234", car_brand: "bmw", car_model: "z4", car_status: "", rent_prize: "249"),
+        Car(car_image: "https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2022BMS26_640/2022BMS260001_640_01.png", car_number: "YDH-234", car_brand: "bmw", car_model: "x4m", car_status: "", rent_prize: "143"),
+        Car(car_image: "https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2021BMC11_640/2021BMC110001_640_01.png", car_number: "YDH-234", car_brand: "bmw", car_model: "m3", car_status: "", rent_prize: "249"),
+        Car(car_image: "https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2021BMS30_640/2021BMS300017_640_01.png", car_number: "YDH-234", car_brand: "bmw", car_model: "x3m", car_status: "", rent_prize: "249"),
+        Car(car_image: "https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2022AUC17_640/2022AUC170013_640_01.png", car_number: "YDH-234", car_brand: "audi", car_model: "r8-coupe", car_status: "", rent_prize: "249"),
         Car(car_image: "https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2020CAS01_640/2020CAS010001_640_01.png", car_number: "YDH-234", car_brand: "ford", car_model: "4 series", car_status: "", rent_prize: "249"),
-        Car(car_image: "https://cdn.jdpower.com/Models/640x480/2019-Porsche-911.jpg", car_number: "YDH-234", car_brand: "bmw", car_model: "911", car_status: "", rent_prize: "249"),
-        Car(car_image: "https://cdn.jdpower.com/Models/640x480/2012-Ford-Mustang.jpg", car_number: "YDH-234", car_brand: "ford", car_model: "Mustang", car_status: "", rent_prize: "249"),
-        Car(car_image: "https://cdn.jdpower.com/models/400x200/2019-audi-a6.jpg", car_number: "YDH-234", car_brand: "audi", car_model: "a6", car_status: "", rent_prize: "249"),
+        Car(car_image: "https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2020PRC01_640/2020PRC010001_640_01.png", car_number: "YDH-234", car_brand: "bmw", car_model: "911", car_status: "", rent_prize: "249"),
+        Car(car_image: "https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2021FOC05_640/2021FOC050001_640_01.png", car_number: "YDH-234", car_brand: "ford", car_model: "Mustang", car_status: "", rent_prize: "249"),
+        Car(car_image: "https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2021AUC02_640/2021AUC020017_640_01.png", car_number: "YDH-234", car_brand: "audi", car_model: "a6", car_status: "", rent_prize: "249"),
     ]
 }
 

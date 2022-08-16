@@ -23,7 +23,7 @@ class CarTableViewCell: UITableViewCell {
         brandLabel.text = model.brand.uppercased()
         typeLabel.text = model.type
         priceLabel.text = "$" + model.price
-        img.downloaded(from: model.imageName)
+        img.loadImageUsingCache(withUrl: model.imageName)
     }
     
     override func awakeFromNib() {
