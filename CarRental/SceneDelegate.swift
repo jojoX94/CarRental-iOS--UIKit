@@ -76,10 +76,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     fileprivate func populateCars() {
         let realm = try! Realm()
         let cars = realm.objects(Car.self)
-        if cars.count == 0 {
+        let brands = realm.objects(Brand.self)
+        
+        if cars.count == 0 && brands.count == 0 {
             try! realm.write() {
-                let def: [Car] = Car.defaultCars
-                for car in def {
+                let defaultCars: [Car] = Car.defaultCars
+                let defaultBrands: [Brand] = Brand.defaultBrands
+                
+                for brand in defaultBrands {
+                    realm.add(brand)
+                }
+                for car in defaultCars {
                     realm.add(car)
                 }
             }

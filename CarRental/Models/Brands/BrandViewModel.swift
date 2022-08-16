@@ -9,5 +9,7 @@ import Foundation
 import UIKit
 
 struct BrandViewModel {
+    var name: String
     var imageName: String
+        
 }

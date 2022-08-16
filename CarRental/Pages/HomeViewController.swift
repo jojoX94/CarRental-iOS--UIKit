@@ -9,9 +9,8 @@ import UIKit
 
 class HomeViewController: VC{
     
-    var Brands: [BrandViewModel] = [BrandViewModel(imageName: "lambo-removebg-preview 2.png"),BrandViewModel(imageName: "lambo-removebg-preview 2.png"),BrandViewModel(imageName: "lambo-removebg-preview 2.png"),BrandViewModel(imageName: "lambo-removebg-preview 2.png")]
-    
     // List datas
+    var brands = [Brand]()
     var cars = [Car]()
     
     @IBOutlet var collectionView: UICollectionView!
@@ -53,6 +52,9 @@ class HomeViewController: VC{
     }
     
     func loadBrandsList() {
+        guard let data = Brand.getAll() else { return }
+        brands = data
+        
         collectionView.register(BrandCollectionViewCell.nib(), forCellWithReuseIdentifier: BrandCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -62,6 +64,7 @@ class HomeViewController: VC{
     func loadCarList() {
         guard let data = Car.getAll() else {return }
         cars = data.shuffled()
+        
         tableView.register(CarTableViewCell.nib(), forCellReuseIdentifier: CarTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
@@ -128,20 +131,28 @@ class HomeViewController: VC{
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return brands.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let model = Brands[indexPath.item]
+        let model = brands[indexPath.item]
         let cv = collectionView.dequeueReusableCell(withReuseIdentifier: BrandCollectionViewCell.identifier, for: indexPath) as! BrandCollectionViewCell
+        
+        cv.configure(model: BrandViewModel(name: model.name, imageName: model.imageUrl))
+
         switch indexPath.item {
-        case 1: cv.configure(imageName: "lambo.png")
-        case 2: cv.configure(imageName: "bmw.png")
-        case 3: cv.configure(imageName: "benz.png")
+        case 2: print("catch found 5")
+        case 3: print("catch found 6")
         default:
-            cv.configure(imageName: "porshe.png")
+            print("catch found default")
         }
-//        cv.configure(imageName: model.imageName)
+//        switch indexPath.item {
+//        case 1: cv.configure(imageName: "lambo.png")
+//        case 2: cv.configure(imageName: "bmw.png")
+//        case 3: cv.configure(imageName: "benz.png")
+//        default:
+//            cv.configure(imageName: "porshe.png")
+//        }
         return cv
     }
     
@@ -149,6 +160,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         tableViewTitle.isHidden = true
         collectionTitle.isHidden = true
+        print("Brand count = \(brands.count)")
         animateView()
     }
     

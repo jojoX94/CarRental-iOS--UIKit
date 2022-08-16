@@ -14,10 +14,13 @@ class BrandCollectionViewCell: UICollectionViewCell {
     @IBOutlet var img: UIImageView!
     @IBOutlet var container: UIView!
     
-    
     public func configure(imageName: String) {
         img?.image = UIImage(named: imageName)
 //        container.dropShadow()
+    }
+    
+    public func configure(model: BrandViewModel) {
+        img.loadImageUsingCache(withUrl: model.imageName)
     }
     
     static func nib() -> UINib {
