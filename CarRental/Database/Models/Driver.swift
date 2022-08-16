@@ -8,7 +8,6 @@
 import RealmSwift
 
 class Driver: Object {
-    @Persisted var driver_ID : String
     @Persisted var driver_name: String
     @Persisted var commission: String
     

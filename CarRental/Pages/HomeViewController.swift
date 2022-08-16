@@ -11,6 +11,9 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     
     var Brands: [BrandViewModel] = [BrandViewModel(imageName: "lambo-removebg-preview 2.png"),BrandViewModel(imageName: "lambo-removebg-preview 2.png"),BrandViewModel(imageName: "lambo-removebg-preview 2.png"),BrandViewModel(imageName: "lambo-removebg-preview 2.png")]
     
+    // List datas
+    var cars = [Car]()
+    
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -29,6 +32,10 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     
     // Local Variable
     var animateIsDone = false
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
 //        removeAnimation()
@@ -53,6 +60,8 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func loadCarList() {
+        guard let data = Car.getAll() else {return }
+        cars = data.shuffled()
         tableView.register(CarTableViewCell.nib(), forCellReuseIdentifier: CarTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
@@ -60,7 +69,7 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     }
  
     /*
-        Collection view => Brand'lists
+        Begin Collection view => Brand'lists
      */
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -91,18 +100,17 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
     
     /*
         End Of Collection view
-        Table view => Car'lists
+        Begin Table view => Car'lists
      */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        cars.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CarTableViewCell.identifier, for: indexPath) as! CarTableViewCell
-        cell.priceLabel.text = "$14.45"
-        cell.typeLabel.text = "X7"
-        cell.brandLabel.text = "BMW"
-        cell.img.image = UIImage(named: "q7.png")
+        let car = cars[indexPath.row]
+        
+        cell.configure(model: CarViewModel(type: car.car_model, brand: car.car_brand, price: car.rent_prize, imageName: car.car_image))
         
         return cell
     }
@@ -120,7 +128,7 @@ class HomeViewController: VC, UICollectionViewDelegate, UICollectionViewDataSour
 
     /*
         End of tableView
-        Function private :)
+        Begin Function private :)
      */
     
     // Remove Animation after view disappear
