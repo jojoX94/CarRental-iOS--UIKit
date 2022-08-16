@@ -11,7 +11,16 @@ class HomeViewController: VC{
     
     // List datas
     var brands = [Brand]()
-    var cars = [Car]()
+    var cars = [Car]() {
+        didSet {
+            carsFiltered = cars
+        }
+    }
+    var carsFiltered = [Car]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
@@ -106,6 +115,9 @@ class HomeViewController: VC{
     // Animate on focus on textfield or click on branch'view
     fileprivate func animateView() {
         if !animateIsDone {
+            tableViewTitle.isHidden = true
+            collectionTitle.isHidden = true
+            
             NSLayoutConstraint.deactivate([
                 TopContainer_BConstr,
                 TopContainer_TConstr,
@@ -140,12 +152,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         cv.configure(model: BrandViewModel(name: model.name, imageName: model.imageUrl))
 
-        switch indexPath.item {
-        case 2: print("catch found 5")
-        case 3: print("catch found 6")
-        default:
-            print("catch found default")
-        }
 //        switch indexPath.item {
 //        case 1: cv.configure(imageName: "lambo.png")
 //        case 2: cv.configure(imageName: "bmw.png")
@@ -157,11 +163,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        tableViewTitle.isHidden = true
-        collectionTitle.isHidden = true
-        print("Brand count = \(brands.count)")
         animateView()
+        if let cell = collectionView.cellForItem(at: indexPath) as? BrandCollectionViewCell {
+            cell.container.borderColor = UIColor(named: "primary")
+        }
+        carsFiltered = cars.filter({ $0.car_brand.lowercased().contains(brands[indexPath.item].name.lowercased())})
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? BrandCollectionViewCell {
+            cell.container.borderColor = .systemGray5
+        }
+
     }
     
 }
@@ -171,12 +185,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cars.count
+        carsFiltered.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CarTableViewCell.identifier, for: indexPath) as! CarTableViewCell
-        let car = cars[indexPath.row]
+        let car = carsFiltered[indexPath.row]
         
         cell.configure(model: CarViewModel(type: car.car_model, brand: car.car_brand, price: car.rent_prize, imageName: car.car_image))
         
