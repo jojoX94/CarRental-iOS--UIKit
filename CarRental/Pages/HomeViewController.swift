@@ -203,6 +203,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "CarDetailViewController") as? CarDetailViewController {
+            vc.model = cars[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         }
     }

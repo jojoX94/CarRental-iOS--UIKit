@@ -425,6 +425,8 @@
                     </view>
                     <connections>
                         <outlet property="bottomContainer" destination="GAb-1i-RS5" id="ltx-UW-mU1"/>
+                        <outlet property="img" destination="gwu-RX-3dR" id="rj5-fP-3JG"/>
+                        <outlet property="name" destination="Un7-HX-CRc" id="6an-Bp-b0v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bln-95-8Zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -471,16 +473,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dt1-P8-iy9" userLabel="Separator">
+                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dt1-P8-iy9" userLabel="Separator">
                                 <rect key="frame" x="0.0" y="400" width="375" height="5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="4J0-3U-NJp"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83S-Vj-Jfk" userLabel="topContainer">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83S-Vj-Jfk" userLabel="topContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_car" translatesAutoresizingMaskIntoConstraints="NO" id="Zak-mR-I5K">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="white_car" translatesAutoresizingMaskIntoConstraints="NO" id="Zak-mR-I5K">
                                         <rect key="frame" x="54" y="30" width="267" height="340"/>
                                     </imageView>
                                 </subviews>
@@ -492,7 +494,7 @@
                                     <constraint firstItem="Zak-mR-I5K" firstAttribute="top" secondItem="83S-Vj-Jfk" secondAttribute="top" constant="30" id="x1F-r4-tgb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEf-CB-7K1" userLabel="bottomContainer">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oEf-CB-7K1" userLabel="bottomContainer">
                                 <rect key="frame" x="30" y="355" width="315" height="442"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to join" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gno-1o-W2e">
@@ -524,7 +526,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dca-Bn-c5A" customClass="Button" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="178.33333333333337" width="275" height="70.666666666666686"/>
+                                                        <rect key="frame" x="0.0" y="178.33333333333331" width="275" height="70.666666666666686"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
@@ -602,7 +604,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAK-Mu-5ia">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAK-Mu-5ia">
                                 <rect key="frame" x="94.333333333333329" y="827" width="186.33333333333337" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Have an account? Sign in"/>
