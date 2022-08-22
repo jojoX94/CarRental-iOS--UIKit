@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: VC{
     
     // List datas
-    var brands = [Brand]()
+    var brands = [BrandViewModel]()
     var cars = [Car]() {
         didSet {
             carsFiltered = cars
@@ -40,6 +40,7 @@ class HomeViewController: VC{
     
     // Local Variable
     var animateIsDone = false
+    var selectedIndex: Int? = nil
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -62,12 +63,16 @@ class HomeViewController: VC{
     
     func loadBrandsList() {
         guard let data = Brand.getAll() else { return }
-        brands = data
+        brands = data.map( { brand in
+            BrandViewModel(name: brand.name, imageName: brand.imageUrl, isSelected: false)
+        })
+        
         
         collectionView.register(BrandCollectionViewCell.nib(), forCellWithReuseIdentifier: BrandCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.allowsMultipleSelection = false
     }
     
     func loadCarList() {
@@ -150,7 +155,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let model = brands[indexPath.item]
         let cv = collectionView.dequeueReusableCell(withReuseIdentifier: BrandCollectionViewCell.identifier, for: indexPath) as! BrandCollectionViewCell
         
-        cv.configure(model: BrandViewModel(name: model.name, imageName: model.imageUrl))
+        cv.configure(model: model)
 
 //        switch indexPath.item {
 //        case 1: cv.configure(imageName: "lambo.png")
@@ -164,20 +169,25 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         animateView()
-        if let cell = collectionView.cellForItem(at: indexPath) as? BrandCollectionViewCell {
-            cell.container.borderColor = UIColor(named: "primary")
+        for (idx, _) in brands.enumerated() {
+            if idx == indexPath.row {
+                brands[idx].isSelected = !brands[idx].isSelected
+                if brands[idx].isSelected {
+                    selectedIndex = idx
+                } else {
+                    selectedIndex = nil
+                }
+            } else {
+                brands[idx].isSelected = false
+            }
         }
+        
+        collectionView.reloadData()
+        
         carsFiltered = cars.filter({ $0.car_brand.lowercased().contains(brands[indexPath.item].name.lowercased())})
         
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? BrandCollectionViewCell {
-            cell.container.borderColor = .systemGray5
-        }
 
-    }
-    
 }
 
 
