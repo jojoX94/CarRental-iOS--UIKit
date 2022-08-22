@@ -9,6 +9,19 @@ import UIKit
 import FirebaseAuth
 
 class VC: UIViewController {
+    
+    var loadingView: LoadingView? = nil
+    
+    var isLoading: Bool = false {
+        didSet {
+            if isLoading {
+                loadingView = LoadingView(frame: view.frame)
+                view.addSubview(loadingView!)
+            } else {
+                loadingView?.removeFromSuperview()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

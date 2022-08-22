@@ -73,6 +73,8 @@
 		49C71F0628AFD1100073ADEE /* IconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71F0528AFD1100073ADEE /* IconLabel.swift */; };
 		49C71F0828AFD2D00073ADEE /* IconLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71F0728AFD2D00073ADEE /* IconLabelViewModel.swift */; };
 		49C71F0C28AFD8860073ADEE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71F0B28AFD8860073ADEE /* SettingViewController.swift */; };
+		49E781A528B3C25E008F6FD0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E781A428B3C25E008F6FD0 /* LoadingView.swift */; };
+		49E781A728B3C26F008F6FD0 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E781A628B3C26F008F6FD0 /* LoadingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +131,8 @@
 		49C71F0528AFD1100073ADEE /* IconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLabel.swift; sourceTree = "<group>"; };
 		49C71F0728AFD2D00073ADEE /* IconLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLabelViewModel.swift; sourceTree = "<group>"; };
 		49C71F0B28AFD8860073ADEE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		49E781A428B3C25E008F6FD0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		49E781A628B3C26F008F6FD0 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +323,7 @@
 		49A9B485289153A4006A2C6F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				49E781A328B3C23B008F6FD0 /* LoadingView */,
 				49C71F0028AFC9E20073ADEE /* IconLabel */,
 				49C71EFC28AFBF290073ADEE /* Gradient.swift */,
 				490E28732897D2B400E45E93 /* CarFeatureView */,
@@ -398,6 +403,15 @@
 				49C71F0728AFD2D00073ADEE /* IconLabelViewModel.swift */,
 			);
 			path = IconLabel;
+			sourceTree = "<group>";
+		};
+		49E781A328B3C23B008F6FD0 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				49E781A428B3C25E008F6FD0 /* LoadingView.swift */,
+				49E781A628B3C26F008F6FD0 /* LoadingView.xib */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +504,7 @@
 				49A9B4942891644F006A2C6F /* IconTextField.xib in Resources */,
 				49A9B48E2891585D006A2C6F /* Nunito-ExtraBold.ttf in Resources */,
 				4992607928940E8100414280 /* CarTableViewCell.xib in Resources */,
+				49E781A728B3C26F008F6FD0 /* LoadingView.xib in Resources */,
 				49A9B47128915150006A2C6F /* Assets.xcassets in Resources */,
 				49A9B48328915364006A2C6F /* Poppins-Regular.ttf in Resources */,
 				49A9B46F28915131006A2C6F /* Main.storyboard in Resources */,
@@ -522,6 +537,7 @@
 				49BAD4CD2898FEA50026FC5F /* Customer.swift in Sources */,
 				499260732893D72800414280 /* BrandCollectionViewCell.swift in Sources */,
 				49BAD4D12899060B0026FC5F /* Rental.swift in Sources */,
+				49E781A528B3C25E008F6FD0 /* LoadingView.swift in Sources */,
 				49A9B49228916095006A2C6F /* IconTextField.swift in Sources */,
 				491A575D2892CADA00D05BB6 /* HomeViewController.swift in Sources */,
 				491A57542892B8C100D05BB6 /* KeychainAttrRepresentable.swift in Sources */,
