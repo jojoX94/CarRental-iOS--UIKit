@@ -80,7 +80,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if cars.count == 0 && brands.count == 0 {
             try! realm.write() {
-                let defaultCars: [Car] = Car.defaultCars
+                let defaultCars: [Car] = Car.defaultCars.shuffled()
                 let defaultBrands: [Brand] = Brand.defaultBrands
                 
                 for brand in defaultBrands {

@@ -6,27 +6,40 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpViewController: VC {
-
+    
+    
+    @IBOutlet weak var emailTextField: IconTextField!
+    @IBOutlet weak var pwdTextField: IconTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func SignUp(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainTabBarController = storyboard.instantiateViewController(identifier: "TabBarViewController")
-        UserDefaults.standard.set("test", forKey: "username")
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
+        
+        if let email = emailTextField.text, let password = pwdTextField.text, email != "", password != "" {
+            Auth.auth().createUser(withEmail: email, password: password) {
+                [weak self] (authResult, error) in
+                if let error = error{
+                    if let errCode = AuthErrorCode.Code(rawValue: error._code) {
+                         self?.alertUser(of: errCode)
+                    }
+                    return
+                    
+                }
+                UserDefaults.standard.set("test", forKey: "username")
+                self?.changeRootVC(to: "TabBarViewController")
+            }
+        }
     }
     
     
     @IBAction func goToSignInScreen(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let signInViewController = storyboard.instantiateViewController(identifier: "SignInViewController")
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(signInViewController)
+        changeRootVC(to: "SignInViewController")
     }
     
     /*

@@ -72,7 +72,7 @@ class HomeViewController: VC{
     
     func loadCarList() {
         guard let data = Car.getAll() else {return }
-        cars = data.shuffled()
+        cars = data
         
         tableView.register(CarTableViewCell.nib(), forCellReuseIdentifier: CarTableViewCell.identifier)
         tableView.delegate = self
@@ -203,7 +203,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "CarDetailViewController") as? CarDetailViewController {
-            vc.model = cars[indexPath.row]
+            vc.model = carsFiltered[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         }
     }
