@@ -22,6 +22,7 @@ class SignUpViewController: VC {
     @IBAction func SignUp(_ sender: Any) {
         
         if let email = emailTextField.text, let password = pwdTextField.text, email != "", password != "" {
+            isLoading = true
             Auth.auth().createUser(withEmail: email, password: password) {
                 [weak self] (authResult, error) in
                 if let error = error{
@@ -32,6 +33,7 @@ class SignUpViewController: VC {
                     
                 }
                 UserDefaults.standard.set("test", forKey: "username")
+                self?.isLoading = false
                 self?.changeRootVC(to: "TabBarViewController")
             }
         }
