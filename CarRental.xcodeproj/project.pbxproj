@@ -66,6 +66,12 @@
 		49C71EF728AFA0870073ADEE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EF628AFA0870073ADEE /* FirebaseMessaging */; };
 		49C71EF928AFA0870073ADEE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EF828AFA0870073ADEE /* FirebaseStorage */; };
 		49C71EFB28AFA0870073ADEE /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EFA28AFA0870073ADEE /* FirebaseStorageCombine-Community */; };
+		49C71EFD28AFBF290073ADEE /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71EFC28AFBF290073ADEE /* Gradient.swift */; };
+		49C71EFF28AFC35A0073ADEE /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71EFE28AFC35A0073ADEE /* UIImage+Extension.swift */; };
+		49C71F0428AFCC960073ADEE /* IconLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C71F0328AFCC960073ADEE /* IconLabel.xib */; };
+		49C71F0628AFD1100073ADEE /* IconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71F0528AFD1100073ADEE /* IconLabel.swift */; };
+		49C71F0828AFD2D00073ADEE /* IconLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71F0728AFD2D00073ADEE /* IconLabelViewModel.swift */; };
+		49C71F0C28AFD8860073ADEE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71F0B28AFD8860073ADEE /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +121,12 @@
 		49BAD4D2289908F90026FC5F /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		49BAD4D428990BA70026FC5F /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		49BAD4D628990C0D0026FC5F /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		49C71EFC28AFBF290073ADEE /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		49C71EFE28AFC35A0073ADEE /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		49C71F0328AFCC960073ADEE /* IconLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconLabel.xib; sourceTree = "<group>"; };
+		49C71F0528AFD1100073ADEE /* IconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLabel.swift; sourceTree = "<group>"; };
+		49C71F0728AFD2D00073ADEE /* IconLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLabelViewModel.swift; sourceTree = "<group>"; };
+		49C71F0B28AFD8860073ADEE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +170,7 @@
 				491A57432892697400D05BB6 /* UIView+Extension.swift */,
 				491A574828927E8300D05BB6 /* UIColor+Extension.swift */,
 				49A0A14F28A6939700C6469E /* UIImageView+Extension.swift */,
+				49C71EFE28AFC35A0073ADEE /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -305,6 +318,8 @@
 		49A9B485289153A4006A2C6F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				49C71F0028AFC9E20073ADEE /* IconLabel */,
+				49C71EFC28AFBF290073ADEE /* Gradient.swift */,
 				490E28732897D2B400E45E93 /* CarFeatureView */,
 				4992607528940BF300414280 /* CarTableViewCell */,
 				499260702893D6FF00414280 /* BrandCollectionViewCell */,
@@ -321,6 +336,7 @@
 				491A57552892BB9300D05BB6 /* LaunchViewController.swift */,
 				491A575C2892CADA00D05BB6 /* HomeViewController.swift */,
 				490E28782897F93B00E45E93 /* CarDetailViewController.swift */,
+				49C71F0B28AFD8860073ADEE /* SettingViewController.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -369,6 +385,16 @@
 				4996A47828AB9BD700038BB2 /* Brand.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		49C71F0028AFC9E20073ADEE /* IconLabel */ = {
+			isa = PBXGroup;
+			children = (
+				49C71F0328AFCC960073ADEE /* IconLabel.xib */,
+				49C71F0528AFD1100073ADEE /* IconLabel.swift */,
+				49C71F0728AFD2D00073ADEE /* IconLabelViewModel.swift */,
+			);
+			path = IconLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,6 +483,7 @@
 				499260742893D72800414280 /* BrandCollectionViewCell.xib in Resources */,
 				49A9B48128915364006A2C6F /* Poppins-SemiBold.ttf in Resources */,
 				49A9B48428915364006A2C6F /* Poppins-Bold.ttf in Resources */,
+				49C71F0428AFCC960073ADEE /* IconLabel.xib in Resources */,
 				49A9B4942891644F006A2C6F /* IconTextField.xib in Resources */,
 				49A9B48E2891585D006A2C6F /* Nunito-ExtraBold.ttf in Resources */,
 				4992607928940E8100414280 /* CarTableViewCell.xib in Resources */,
@@ -479,7 +506,11 @@
 				4996A47928AB9BD700038BB2 /* Brand.swift in Sources */,
 				491A574728927DF100D05BB6 /* Button.swift in Sources */,
 				49A0A15028A6939700C6469E /* UIImageView+Extension.swift in Sources */,
+				49C71EFF28AFC35A0073ADEE /* UIImage+Extension.swift in Sources */,
+				49C71F0C28AFD8860073ADEE /* SettingViewController.swift in Sources */,
+				49C71F0828AFD2D00073ADEE /* IconLabelViewModel.swift in Sources */,
 				491A57442892697400D05BB6 /* UIView+Extension.swift in Sources */,
+				49C71EFD28AFBF290073ADEE /* Gradient.swift in Sources */,
 				49BAD4D528990BA70026FC5F /* Driver.swift in Sources */,
 				49A9B4962891768D006A2C6F /* TextFieldViewModel.swift in Sources */,
 				490E28752897D34300E45E93 /* CarFeatureView.swift in Sources */,
@@ -492,6 +523,7 @@
 				491A575D2892CADA00D05BB6 /* HomeViewController.swift in Sources */,
 				491A57542892B8C100D05BB6 /* KeychainAttrRepresentable.swift in Sources */,
 				49A9B46C28915130006A2C6F /* AuthViewController.swift in Sources */,
+				49C71F0628AFD1100073ADEE /* IconLabel.swift in Sources */,
 				49BAD4D3289908F90026FC5F /* Transaction.swift in Sources */,
 				491A575B2892BCE200D05BB6 /* VC.swift in Sources */,
 				49A9B46828915130006A2C6F /* AppDelegate.swift in Sources */,

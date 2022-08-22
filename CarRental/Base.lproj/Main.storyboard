@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cFM-ii-7lW">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -12,6 +12,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
         <array key="Poppins-Bold.ttf">
             <string>Poppins-Bold</string>
         </array>
@@ -31,7 +34,7 @@
             <objects>
                 <viewController id="mQe-IL-lDK" customClass="LaunchViewController" customModule="CarRental" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DvQ-2G-Hrw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uOp-fq-pQ0">
@@ -40,7 +43,7 @@
                                 <color key="backgroundColor" name="primary"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z7F-Nb-N6H">
-                                <rect key="frame" x="17.666666666666657" y="213.66666666666663" width="340" height="385"/>
+                                <rect key="frame" x="37" y="255.5" width="340" height="385"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_car" translatesAutoresizingMaskIntoConstraints="NO" id="ivs-CF-0MZ">
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="340"/>
@@ -99,7 +102,7 @@
                 <navigationController id="bjJ-OX-ET5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" image="dashicons_screenoptions" id="2Hg-ay-ORZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eyj-ce-9W0">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -115,14 +118,14 @@
             <objects>
                 <viewController id="CBO-q1-4hr" customClass="HomeViewController" customModule="CarRental" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xh6-6o-EJa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tui-Ox-qHz" userLabel="TopContainer">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="323.66666666666669"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="365.5"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LZa-cn-Jx0">
-                                        <rect key="frame" x="30" y="136.33333333333334" width="315" height="51"/>
+                                        <rect key="frame" x="30" y="157.5" width="354" height="51"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -140,7 +143,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LTX-4l-fRT">
-                                <rect key="frame" x="30" y="283.66666666666669" width="345" height="80"/>
+                                <rect key="frame" x="30" y="325.5" width="384" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="mK7-1j-0J0"/>
@@ -163,33 +166,33 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brands" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTb-CP-E88">
-                                <rect key="frame" x="30" y="246.66666666666663" width="345" height="28"/>
+                                <rect key="frame" x="30" y="288.5" width="384" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbl-ie-Ded" userLabel="Separator">
-                                <rect key="frame" x="0.0" y="403.66666666666669" width="375" height="5"/>
+                                <rect key="frame" x="0.0" y="445.5" width="414" height="5"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="G8t-Zv-YUi"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot deals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LL7-08-BiS">
-                                <rect key="frame" x="30" y="438.66666666666669" width="95" height="28"/>
+                                <rect key="frame" x="30" y="480.5" width="95" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gzc-Av-3fD">
-                                <rect key="frame" x="30" y="476.66666666666669" width="315" height="252.33333333333331"/>
+                                <rect key="frame" x="30" y="518.5" width="354" height="294.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Dmq-W5-lIP">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="315" height="44"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="354" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dmq-W5-lIP" id="UKq-c8-LBv">
-                                            <rect key="frame" x="0.0" y="0.0" width="315" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -245,39 +248,39 @@
             <objects>
                 <viewController storyboardIdentifier="CarDetailViewController" id="d83-A8-yFc" customClass="CarDetailViewController" customModule="CarRental" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uft-zn-9wO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BMW-X3" translatesAutoresizingMaskIntoConstraints="NO" id="gwu-RX-3dR">
-                                <rect key="frame" x="7.6666666666666572" y="44" width="360" height="207"/>
+                                <rect key="frame" x="27" y="44" width="360" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="207" id="ILN-HT-p2s"/>
                                     <constraint firstAttribute="width" constant="360" id="SbC-OT-dut"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAb-1i-RS5">
-                                <rect key="frame" x="0.0" y="271" width="375" height="507"/>
+                                <rect key="frame" x="0.0" y="271" width="414" height="591"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMW X5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Un7-HX-CRc">
-                                        <rect key="frame" x="22" y="34" width="101" height="33.666666666666657"/>
+                                        <rect key="frame" x="22" y="34" width="101" height="34"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eym-pS-jcg">
-                                        <rect key="frame" x="22" y="67.666666666666686" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="22" y="68" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
                                         <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5Q-op-r16">
-                                        <rect key="frame" x="323" y="38.333333333333314" width="29" height="25.333333333333329"/>
+                                        <rect key="frame" x="362" y="38.5" width="29" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KTG-9c-avg">
-                                        <rect key="frame" x="292" y="37.999999999999986" width="25" height="24.666666666666664"/>
+                                        <rect key="frame" x="331" y="38" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Jzr-0u-sLx"/>
                                             <constraint firstAttribute="width" constant="25" id="VQe-LQ-xkj"/>
@@ -285,19 +288,19 @@
                                         <imageReference key="image" image="star.fill" catalog="system" symbolScale="medium" renderingMode="original"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Features" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1P-az-AuN">
-                                        <rect key="frame" x="21.999999999999993" y="97.666666666666686" width="87.333333333333314" height="28"/>
+                                        <rect key="frame" x="22" y="98" width="87.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2Lm-bZ-Yhd">
-                                        <rect key="frame" x="22" y="132" width="330" height="212"/>
+                                        <rect key="frame" x="22" y="132" width="369" height="212"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6NF-L5-4qL">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="369" height="100"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcR-8Y-o77" customClass="CarFeatureView" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="100"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="ic_speed"/>
@@ -306,7 +309,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4e-b8-9O8" customClass="CarFeatureView" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="114.33333333333334" y="0.0" width="104.33333333333334" height="100"/>
+                                                        <rect key="frame" x="126.5" y="0.0" width="117" height="100"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="ic_wifi"/>
@@ -315,7 +318,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xn3-ks-oSA" customClass="CarFeatureView" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="228.66666666666666" y="0.0" width="101.33333333333334" height="100"/>
+                                                        <rect key="frame" x="253.5" y="0.0" width="115.5" height="100"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="ic_normal"/>
@@ -329,10 +332,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2Ya-fW-psZ">
-                                                <rect key="frame" x="0.0" y="111.99999999999994" width="330" height="100"/>
+                                                <rect key="frame" x="0.0" y="112" width="369" height="100"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqZ-Cf-Gce" customClass="CarFeatureView" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="100"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="ic_outline-sensors"/>
@@ -341,7 +344,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJT-Zi-Zyp" customClass="CarFeatureView" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="114.33333333333334" y="0.0" width="104.33333333333334" height="100"/>
+                                                        <rect key="frame" x="126.5" y="0.0" width="117" height="100"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="ic_bluetooth"/>
@@ -350,7 +353,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNd-R4-adH" customClass="CarFeatureView" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="228.66666666666666" y="0.0" width="101.33333333333334" height="100"/>
+                                                        <rect key="frame" x="253.5" y="0.0" width="115.5" height="100"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="ic_door"/>
@@ -367,13 +370,13 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$24.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZM-mj-qh8">
-                                        <rect key="frame" x="22" y="373.66666666666663" width="82.333333333333329" height="33.666666666666686"/>
+                                        <rect key="frame" x="22" y="374" width="82.5" height="34"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkV-e3-rpr">
-                                        <rect key="frame" x="186" y="365" width="166" height="51"/>
+                                        <rect key="frame" x="225" y="365.5" width="166" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="UAx-c1-EWl"/>
                                             <constraint firstAttribute="width" constant="166" id="rpX-jE-T8l"/>
@@ -440,7 +443,7 @@
                 <navigationController id="0Jf-hw-zVH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" image="ci_settings-filled" id="edT-ST-gko"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7fK-og-U3K">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -451,40 +454,134 @@
             </objects>
             <point key="canvasLocation" x="2581" y="980"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="F8p-aV-ceP">
             <objects>
-                <viewController id="1Oz-5g-9o6" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zi9-Jv-3k7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                <viewController id="1Oz-5g-9o6" customClass="SettingViewController" customModule="CarRental" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zi9-Jv-3k7" customClass="Gradient" customModule="CarRental" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDx-lq-Fis" userLabel="Section-Profile">
+                                <rect key="frame" x="32" y="109" width="350" height="257"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="nxS-uZ-gtP">
+                                        <rect key="frame" x="122" y="14" width="106" height="106"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="106" id="AYn-8U-wuL"/>
+                                            <constraint firstAttribute="width" constant="106" id="VxJ-7m-sv3"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="106" id="kxy-l5-K7S"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lais Borges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uk-gY-Gv4">
+                                        <rect key="frame" x="131.5" y="126" width="87" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="UjQ-rq-fy7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
+                                        <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5M-zo-Xhh" customClass="IconLabel" customModule="CarRental" customModuleProvider="target">
+                                        <rect key="frame" x="75" y="151" width="200" height="22"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="0II-E5-0KI"/>
+                                            <constraint firstAttribute="width" constant="200" id="om6-DF-lgA"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI Designer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bV-kP-iWR">
+                                        <rect key="frame" x="136" y="169" width="78.5" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="R2W-BG-09z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                        <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTG-9P-hqf">
+                                        <rect key="frame" x="111" y="203" width="128" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="40K-9G-IS9"/>
+                                            <constraint firstAttribute="width" constant="128" id="mJq-eR-lpg"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Sign Out">
+                                            <color key="baseBackgroundColor" red="1" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bTG-9P-hqf" secondAttribute="bottom" constant="14" id="1h1-OZ-Q6u"/>
+                                    <constraint firstItem="1uk-gY-Gv4" firstAttribute="top" secondItem="nxS-uZ-gtP" secondAttribute="bottom" constant="6" id="Doo-gN-QFD"/>
+                                    <constraint firstItem="bTG-9P-hqf" firstAttribute="centerX" secondItem="aDx-lq-Fis" secondAttribute="centerX" id="E63-5q-Udq"/>
+                                    <constraint firstItem="nxS-uZ-gtP" firstAttribute="top" secondItem="aDx-lq-Fis" secondAttribute="top" constant="14" id="S0h-v3-5ul"/>
+                                    <constraint firstAttribute="height" constant="257" id="Tqk-51-T5y"/>
+                                    <constraint firstItem="bTG-9P-hqf" firstAttribute="top" secondItem="8bV-kP-iWR" secondAttribute="bottom" constant="12" id="arI-bz-bac"/>
+                                    <constraint firstItem="8bV-kP-iWR" firstAttribute="centerX" secondItem="aDx-lq-Fis" secondAttribute="centerX" id="ib7-E8-6tn"/>
+                                    <constraint firstItem="i5M-zo-Xhh" firstAttribute="top" secondItem="1uk-gY-Gv4" secondAttribute="bottom" constant="3" id="kRc-Xc-Xl5"/>
+                                    <constraint firstItem="1uk-gY-Gv4" firstAttribute="centerX" secondItem="aDx-lq-Fis" secondAttribute="centerX" id="kiY-ai-sph"/>
+                                    <constraint firstItem="i5M-zo-Xhh" firstAttribute="centerX" secondItem="aDx-lq-Fis" secondAttribute="centerX" id="qUP-DA-YcH"/>
+                                    <constraint firstItem="nxS-uZ-gtP" firstAttribute="centerX" secondItem="aDx-lq-Fis" secondAttribute="centerX" id="rX7-AN-ZtY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="yZp-rO-Z24"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yZp-rO-Z24" firstAttribute="trailing" secondItem="aDx-lq-Fis" secondAttribute="trailing" constant="32" id="DJh-kK-9TZ"/>
+                            <constraint firstItem="aDx-lq-Fis" firstAttribute="top" secondItem="yZp-rO-Z24" secondAttribute="top" constant="21" id="PEL-xh-h3C"/>
+                            <constraint firstItem="aDx-lq-Fis" firstAttribute="leading" secondItem="yZp-rO-Z24" secondAttribute="leading" constant="32" id="du4-IE-pLb"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="1" green="0.36078431372549019" blue="0.0" alpha="0.10409515582962542" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.22745098039215686" green="0.22352941176470587" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="ak3-6P-MZF"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="nxS-uZ-gtP" id="91q-Cr-1SD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMO-9g-VTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3535" y="980"/>
+            <point key="canvasLocation" x="3534.7826086956525" y="979.6875"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="AuthViewController" id="BYZ-38-t0r" customClass="AuthViewController" customModule="CarRental" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dt1-P8-iy9" userLabel="Separator">
-                                <rect key="frame" x="0.0" y="400" width="375" height="5"/>
+                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dt1-P8-iy9" userLabel="Separator">
+                                <rect key="frame" x="0.0" y="400" width="414" height="5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="4J0-3U-NJp"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83S-Vj-Jfk" userLabel="topContainer">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83S-Vj-Jfk" userLabel="topContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_car" translatesAutoresizingMaskIntoConstraints="NO" id="Zak-mR-I5K">
-                                        <rect key="frame" x="54" y="30" width="267" height="340"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="white_car" translatesAutoresizingMaskIntoConstraints="NO" id="Zak-mR-I5K">
+                                        <rect key="frame" x="54" y="30" width="306" height="340"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -495,23 +592,23 @@
                                     <constraint firstItem="Zak-mR-I5K" firstAttribute="top" secondItem="83S-Vj-Jfk" secondAttribute="top" constant="30" id="x1F-r4-tgb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEf-CB-7K1" userLabel="bottomContainer">
-                                <rect key="frame" x="30" y="355" width="315" height="442"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oEf-CB-7K1" userLabel="bottomContainer">
+                                <rect key="frame" x="30" y="355" width="354" height="442"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to join" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gno-1o-W2e">
-                                        <rect key="frame" x="0.0" y="30" width="315" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="30" width="354" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                         <color key="textColor" systemColor="systemGray3Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbf-cZ-d0K" userLabel="actionContainer">
-                                        <rect key="frame" x="20" y="67" width="275" height="375"/>
+                                        <rect key="frame" x="20" y="67" width="314" height="375"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="DJ8-oy-6dz">
-                                                <rect key="frame" x="0.0" y="0.0" width="275" height="375"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="375"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGZ-1O-uiS" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="71"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="71"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email address"/>
@@ -519,7 +616,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7lt-c2-eGF" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="89" width="275" height="71.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="89" width="314" height="71"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
@@ -527,7 +624,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dca-Bn-c5A" customClass="Button" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="178.33333333333337" width="275" height="70.666666666666686"/>
+                                                        <rect key="frame" x="0.0" y="178" width="314" height="71"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
@@ -549,13 +646,13 @@
                                                         </connections>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BW-fv-cnp">
-                                                        <rect key="frame" x="0.0" y="267" width="275" height="19.666666666666686"/>
+                                                        <rect key="frame" x="0.0" y="267" width="314" height="20"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-Gg-AWY" customClass="Button" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="304.66666666666663" width="275" height="70.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="305" width="314" height="70"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
@@ -605,8 +702,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAK-Mu-5ia">
-                                <rect key="frame" x="94.333333333333329" y="827" width="186.33333333333337" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAK-Mu-5ia">
+                                <rect key="frame" x="114" y="827" width="186.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Have an account? Sign in"/>
                             </button>
@@ -641,7 +738,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cFM-ii-7lW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="htm-Fe-qkb">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -665,6 +762,7 @@
         <image name="ic_outline-sensors" width="30" height="30"/>
         <image name="ic_speed" width="30" height="30"/>
         <image name="ic_wifi" width="30" height="30"/>
+        <image name="profile" width="1024" height="1024"/>
         <image name="ri_lock-password-fill" width="24" height="24"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="white_car" width="340" height="340"/>
