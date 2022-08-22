@@ -18,10 +18,15 @@ class SignInViewController: VC {
 
     @IBAction func SignIn(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainTabBarController = storyboard.instantiateViewController(identifier: "TabBar")
+            let mainTabBarController = storyboard.instantiateViewController(identifier: "TabBarViewController")
         UserDefaults.standard.set("test", forKey: "username")
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
     }
     
+    @IBAction func goToSignUpScreen(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let signUpViewController = storyboard.instantiateViewController(identifier: "SignUpViewController")
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(signUpViewController)
+    }
 }
 

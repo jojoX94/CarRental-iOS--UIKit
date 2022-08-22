@@ -31,7 +31,7 @@
 		49A0A15028A6939700C6469E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0A14F28A6939700C6469E /* UIImageView+Extension.swift */; };
 		49A9B46828915130006A2C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46728915130006A2C6F /* AppDelegate.swift */; };
 		49A9B46A28915130006A2C6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46928915130006A2C6F /* SceneDelegate.swift */; };
-		49A9B46C28915130006A2C6F /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46B28915130006A2C6F /* SignInController.swift */; };
+		49A9B46C28915130006A2C6F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46B28915130006A2C6F /* SignInViewController.swift */; };
 		49A9B46F28915131006A2C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B46D28915131006A2C6F /* Main.storyboard */; };
 		49A9B47128915150006A2C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B47028915150006A2C6F /* Assets.xcassets */; };
 		49A9B47428915150006A2C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B47228915150006A2C6F /* LaunchScreen.storyboard */; };
@@ -101,7 +101,7 @@
 		49A9B46428915130006A2C6F /* CarRental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRental.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A9B46728915130006A2C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A9B46928915130006A2C6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49A9B46B28915130006A2C6F /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		49A9B46B28915130006A2C6F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		49A9B46E28915131006A2C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49A9B47028915150006A2C6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49A9B47328915150006A2C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 		49A9B486289153AD006A2C6F /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				49A9B46B28915130006A2C6F /* SignInController.swift */,
+				49A9B46B28915130006A2C6F /* SignInViewController.swift */,
 				4992605F2893B2CE00414280 /* TabBarViewController.swift */,
 				491A57552892BB9300D05BB6 /* LaunchViewController.swift */,
 				491A575C2892CADA00D05BB6 /* HomeViewController.swift */,
@@ -525,7 +525,7 @@
 				49A9B49228916095006A2C6F /* IconTextField.swift in Sources */,
 				491A575D2892CADA00D05BB6 /* HomeViewController.swift in Sources */,
 				491A57542892B8C100D05BB6 /* KeychainAttrRepresentable.swift in Sources */,
-				49A9B46C28915130006A2C6F /* SignInController.swift in Sources */,
+				49A9B46C28915130006A2C6F /* SignInViewController.swift in Sources */,
 				49C71F0628AFD1100073ADEE /* IconLabel.swift in Sources */,
 				49BAD4D3289908F90026FC5F /* Transaction.swift in Sources */,
 				491A575B2892BCE200D05BB6 /* VC.swift in Sources */,

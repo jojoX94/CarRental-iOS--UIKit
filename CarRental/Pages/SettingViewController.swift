@@ -19,6 +19,12 @@ class SettingViewController: VC {
     }
     
 
+    @IBAction func goToSignInScreen(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let signUpViewController = storyboard.instantiateViewController(identifier: "SignUpViewController")
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(signUpViewController)
+    }
+    
     /*
     // MARK: - Navigation
 
