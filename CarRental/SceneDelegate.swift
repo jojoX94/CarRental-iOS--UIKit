@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // if user isn't logged in
             // instantiate the navigation controller and set it as root view controller
             // using the storyboard identifier we set earlier
-            let loginNavController = storyboard.instantiateViewController(identifier: "AuthViewController")
+            let loginNavController = storyboard.instantiateViewController(identifier: "SignInViewController")
             window?.rootViewController = loginNavController
         }
         guard let _ = (scene as? UIWindowScene) else { return }
