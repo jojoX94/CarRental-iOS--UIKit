@@ -19,6 +19,12 @@
 		491A57582892BC4B00D05BB6 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A57572892BC4B00D05BB6 /* Defaults.swift */; };
 		491A575B2892BCE200D05BB6 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A575A2892BCE200D05BB6 /* VC.swift */; };
 		491A575D2892CADA00D05BB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A575C2892CADA00D05BB6 /* HomeViewController.swift */; };
+		491B027F28B4F136003E661B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 491B027E28B4F136003E661B /* SnapKit */; };
+		491B028628B4F1B8003E661B /* SnackBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B028028B4F1B8003E661B /* SnackBarStyle.swift */; };
+		491B028928B4F1B8003E661B /* SnackBar+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B028328B4F1B8003E661B /* SnackBar+Action.swift */; };
+		491B028A28B4F1B8003E661B /* SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B028428B4F1B8003E661B /* SnackBar.swift */; };
+		491B028B28B4F1B8003E661B /* SnackBar+Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B028528B4F1B8003E661B /* SnackBar+Duration.swift */; };
+		491B028D28B4FC1E003E661B /* AppSnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B028C28B4FC1E003E661B /* AppSnackBar.swift */; };
 		499260602893B2CE00414280 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992605F2893B2CE00414280 /* TabBarViewController.swift */; };
 		4992606F2893CC6A00414280 /* BrandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992606E2893CC6A00414280 /* BrandViewModel.swift */; };
 		499260732893D72800414280 /* BrandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499260712893D72800414280 /* BrandCollectionViewCell.swift */; };
@@ -91,6 +97,11 @@
 		491A57572892BC4B00D05BB6 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		491A575A2892BCE200D05BB6 /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		491A575C2892CADA00D05BB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = CarRental/Pages/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		491B028028B4F1B8003E661B /* SnackBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarStyle.swift; sourceTree = "<group>"; };
+		491B028328B4F1B8003E661B /* SnackBar+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SnackBar+Action.swift"; sourceTree = "<group>"; };
+		491B028428B4F1B8003E661B /* SnackBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
+		491B028528B4F1B8003E661B /* SnackBar+Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SnackBar+Duration.swift"; sourceTree = "<group>"; };
+		491B028C28B4FC1E003E661B /* AppSnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSnackBar.swift; sourceTree = "<group>"; };
 		4992605F2893B2CE00414280 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = CarRental/Pages/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
 		4992606E2893CC6A00414280 /* BrandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewModel.swift; sourceTree = "<group>"; };
 		499260712893D72800414280 /* BrandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -143,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49C71EE528AFA0870073ADEE /* FirebaseAnalyticsSwift in Frameworks */,
+				491B027F28B4F136003E661B /* SnapKit in Frameworks */,
 				49C71EE928AFA0870073ADEE /* FirebaseAuthCombine-Community in Frameworks */,
 				49C71EE728AFA0870073ADEE /* FirebaseAuth in Frameworks */,
 				49C71EF128AFA0870073ADEE /* FirebaseFirestore in Frameworks */,
@@ -208,6 +220,26 @@
 				491A575A2892BCE200D05BB6 /* VC.swift */,
 			);
 			path = Container;
+			sourceTree = "<group>";
+		};
+		491B025E28B4C71B003E661B /* SnackBar */ = {
+			isa = PBXGroup;
+			children = (
+				491B025F28B4C753003E661B /* Classes */,
+				491B028C28B4FC1E003E661B /* AppSnackBar.swift */,
+			);
+			path = SnackBar;
+			sourceTree = "<group>";
+		};
+		491B025F28B4C753003E661B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				491B028428B4F1B8003E661B /* SnackBar.swift */,
+				491B028328B4F1B8003E661B /* SnackBar+Action.swift */,
+				491B028528B4F1B8003E661B /* SnackBar+Duration.swift */,
+				491B028028B4F1B8003E661B /* SnackBarStyle.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		4992606C2893CC2C00414280 /* Models */ = {
@@ -326,6 +358,7 @@
 		49A9B485289153A4006A2C6F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				491B025E28B4C71B003E661B /* SnackBar */,
 				49E781A328B3C23B008F6FD0 /* LoadingView */,
 				49C71F0028AFC9E20073ADEE /* IconLabel */,
 				49C71EFC28AFBF290073ADEE /* Gradient.swift */,
@@ -449,6 +482,7 @@
 				49C71EF628AFA0870073ADEE /* FirebaseMessaging */,
 				49C71EF828AFA0870073ADEE /* FirebaseStorage */,
 				49C71EFA28AFA0870073ADEE /* FirebaseStorageCombine-Community */,
+				491B027E28B4F136003E661B /* SnapKit */,
 			);
 			productName = CarRental;
 			productReference = 49A9B46428915130006A2C6F /* CarRental.app */;
@@ -481,6 +515,7 @@
 			packageReferences = (
 				49BAD4C62898FCF10026FC5F /* XCRemoteSwiftPackageReference "realm-swift" */,
 				49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				491B027D28B4F136003E661B /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 49A9B46528915130006A2C6F /* Products */;
 			projectDirPath = "";
@@ -534,6 +569,7 @@
 				49C71EFD28AFBF290073ADEE /* Gradient.swift in Sources */,
 				49BAD4D528990BA70026FC5F /* Driver.swift in Sources */,
 				49A9B4962891768D006A2C6F /* TextFieldViewModel.swift in Sources */,
+				491B028B28B4F1B8003E661B /* SnackBar+Duration.swift in Sources */,
 				490E28752897D34300E45E93 /* CarFeatureView.swift in Sources */,
 				490E28792897F93B00E45E93 /* CarDetailViewController.swift in Sources */,
 				4992606F2893CC6A00414280 /* BrandViewModel.swift in Sources */,
@@ -542,6 +578,7 @@
 				49BAD4D12899060B0026FC5F /* Rental.swift in Sources */,
 				49E781A528B3C25E008F6FD0 /* LoadingView.swift in Sources */,
 				49A9B49228916095006A2C6F /* IconTextField.swift in Sources */,
+				491B028D28B4FC1E003E661B /* AppSnackBar.swift in Sources */,
 				491A575D2892CADA00D05BB6 /* HomeViewController.swift in Sources */,
 				491A57542892B8C100D05BB6 /* KeychainAttrRepresentable.swift in Sources */,
 				4998957828B4B11700BA9A7D /* UIButton+Extension.swift in Sources */,
@@ -549,12 +586,15 @@
 				49C71F0628AFD1100073ADEE /* IconLabel.swift in Sources */,
 				49BAD4D3289908F90026FC5F /* Transaction.swift in Sources */,
 				491A575B2892BCE200D05BB6 /* VC.swift in Sources */,
+				491B028A28B4F1B8003E661B /* SnackBar.swift in Sources */,
 				49A9B46828915130006A2C6F /* AppDelegate.swift in Sources */,
 				491A57562892BB9300D05BB6 /* LaunchViewController.swift in Sources */,
 				491A57582892BC4B00D05BB6 /* Defaults.swift in Sources */,
 				4992607828940E8100414280 /* CarTableViewCell.swift in Sources */,
+				491B028628B4F1B8003E661B /* SnackBarStyle.swift in Sources */,
 				49A9B46A28915130006A2C6F /* SceneDelegate.swift in Sources */,
 				49930BCE28B35697003DBB22 /* SignUpViewController.swift in Sources */,
+				491B028928B4F1B8003E661B /* SnackBar+Action.swift in Sources */,
 				4992607C2894114800414280 /* Car.swift in Sources */,
 				49BAD4D728990C0D0026FC5F /* Report.swift in Sources */,
 				499260602893B2CE00414280 /* TabBarViewController.swift in Sources */,
@@ -781,6 +821,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		491B027D28B4F136003E661B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
 		49BAD4C62898FCF10026FC5F /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -800,6 +848,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		491B027E28B4F136003E661B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 491B027D28B4F136003E661B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		49BAD4C72898FCF10026FC5F /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 49BAD4C62898FCF10026FC5F /* XCRemoteSwiftPackageReference "realm-swift" */;

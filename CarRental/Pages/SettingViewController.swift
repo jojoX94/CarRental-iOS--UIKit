@@ -25,10 +25,10 @@ class SettingViewController: VC {
             [weak self] auth , user in
             if user != nil {
                 self?.authButton.setBackgroundColor(color: .systemGreen, forState: .normal)
-                self?.authButton.setTitle("Sign Out", for: .highlighted)
+                self?.authButton.setTitle("Sign Out", for: .normal)
             } else {
                 self?.authButton.setBackgroundColor(color: UIColor(named: "regularPink") ?? .systemPink, forState: .normal)
-                self?.authButton.setTitle("Sign Up", for: .highlighted)
+                self?.authButton.setTitle("Sign Up", for: .normal)
             }
         }
     }

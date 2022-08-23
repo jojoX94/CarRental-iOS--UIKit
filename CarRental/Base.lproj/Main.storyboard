@@ -598,13 +598,13 @@
                                 <rect key="frame" x="30" y="400.5" width="354" height="385.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbf-cZ-d0K" userLabel="actionContainer">
-                                        <rect key="frame" x="20" y="101.5" width="314" height="284"/>
+                                        <rect key="frame" x="20" y="89.5" width="314" height="296"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="DJ8-oy-6dz">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="108"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="120"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGZ-1O-uiS" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="51"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email address"/>
@@ -612,7 +612,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7lt-c2-eGF" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="63" width="314" height="45"/>
+                                                        <rect key="frame" x="0.0" y="69" width="314" height="51"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
@@ -626,7 +626,7 @@
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dca-Bn-c5A" customClass="Button" customModule="CarRental" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="123" width="314" height="45"/>
+                                                <rect key="frame" x="0.0" y="135" width="314" height="45"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="0Fx-Ce-Gx1"/>
@@ -652,7 +652,7 @@
                                                 </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BW-fv-cnp">
-                                                <rect key="frame" x="0.0" y="178" width="314" height="20"/>
+                                                <rect key="frame" x="0.0" y="190" width="314" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="zfL-mQ-QAY"/>
                                                 </constraints>
@@ -661,7 +661,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-Gg-AWY" customClass="Button" customModule="CarRental" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="208" width="314" height="45"/>
+                                                <rect key="frame" x="0.0" y="220" width="314" height="45"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="FIr-Ac-Ue9"/>
@@ -699,7 +699,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gno-1o-W2e">
-                                        <rect key="frame" x="0.0" y="30" width="354" height="51.5"/>
+                                        <rect key="frame" x="0.0" y="30" width="354" height="39.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                         <color key="textColor" systemColor="systemGray3Color"/>
                                         <nil key="highlightedColor"/>
@@ -759,6 +759,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="container" destination="8bC-Xf-vdC" id="8q1-kF-kA2"/>
                         <outlet property="emailTextField" destination="zGZ-1O-uiS" id="Gi9-zw-Lbb"/>
                         <outlet property="pwdTextField" destination="7lt-c2-eGF" id="QAP-cg-OSM"/>
                     </connections>
@@ -800,13 +801,13 @@
                                 <rect key="frame" x="30" y="400.5" width="354" height="385.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6q-2a-7lI" userLabel="actionContainer">
-                                        <rect key="frame" x="20" y="101.5" width="314" height="284"/>
+                                        <rect key="frame" x="20" y="89.5" width="314" height="296"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-f1-jID">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="108"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="120"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9RX-yw-1ks" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="51"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email address"/>
@@ -814,7 +815,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sil-UL-hEe" customClass="IconTextField" customModule="CarRental" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="63" width="314" height="45"/>
+                                                        <rect key="frame" x="0.0" y="69" width="314" height="51"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
@@ -828,7 +829,7 @@
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48j-kx-hKF" customClass="Button" customModule="CarRental" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="123" width="314" height="45"/>
+                                                <rect key="frame" x="0.0" y="135" width="314" height="45"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="ViJ-Ru-8qs"/>
@@ -854,7 +855,7 @@
                                                 </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6r-Vw-Las">
-                                                <rect key="frame" x="0.0" y="178" width="314" height="20"/>
+                                                <rect key="frame" x="0.0" y="190" width="314" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="9CH-Rd-bY3"/>
                                                 </constraints>
@@ -863,7 +864,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYl-u1-OLb" customClass="Button" customModule="CarRental" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="208" width="314" height="45"/>
+                                                <rect key="frame" x="0.0" y="220" width="314" height="45"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="PKQ-ok-MM0"/>
@@ -901,7 +902,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to join" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgI-Na-mOS">
-                                        <rect key="frame" x="0.0" y="30" width="354" height="51.5"/>
+                                        <rect key="frame" x="0.0" y="30" width="354" height="39.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                         <color key="textColor" systemColor="systemGray3Color"/>
                                         <nil key="highlightedColor"/>

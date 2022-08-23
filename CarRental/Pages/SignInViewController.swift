@@ -13,6 +13,8 @@ class SignInViewController: VC {
     @IBOutlet weak var emailTextField: IconTextField!
     @IBOutlet weak var pwdTextField: IconTextField!
     
+    @IBOutlet var container: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
