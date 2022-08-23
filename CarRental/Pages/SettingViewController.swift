@@ -23,25 +23,26 @@ class SettingViewController: VC {
         profileImageView.makeRounded()
         Auth.auth().addStateDidChangeListener {
             [weak self] auth , user in
-            if let user = user {
-                self?.authButton.backgroundColor = .systemGreen
-                self?.authButton.setTitle("Sign Out", for: .normal)
+            if user != nil {
+                self?.authButton.setBackgroundColor(color: .systemGreen, forState: .normal)
+                self?.authButton.setTitle("Sign Out", for: .highlighted)
             } else {
-                self?.authButton.backgroundColor = UIColor(named: "regularPink")
-                self?.authButton.setTitle("Sign Up", for: .normal) 
+                self?.authButton.setBackgroundColor(color: UIColor(named: "regularPink") ?? .systemPink, forState: .normal)
+                self?.authButton.setTitle("Sign Up", for: .highlighted)
             }
         }
     }
 
     @IBAction func goToSignInScreen(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let signUpViewController = storyboard.instantiateViewController(identifier: "SignUpViewController")
-//        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(signUpViewController)
-        let firebaseAuth = Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
+        if Auth.auth().currentUser == nil {
+            self.changeRootVC(to: "SignUpViewController")
+        } else {
+            let firebaseAuth = Auth.auth()
+            do {
+              try firebaseAuth.signOut()
+            } catch let signOutError as NSError {
+              print("Error signing out: %@", signOutError)
+            }
         }
     }
     

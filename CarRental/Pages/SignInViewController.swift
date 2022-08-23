@@ -25,6 +25,7 @@ class SignInViewController: VC {
             Auth.auth().signIn(withEmail: email, password: password) {
                 [weak self] (authResult, error) in
                 if let error = error{
+                    self?.isLoading = false
                     if let errCode = AuthErrorCode.Code(rawValue: error._code) {
                          self?.alertUser(of: errCode)
                     }

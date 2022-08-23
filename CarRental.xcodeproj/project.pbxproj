@@ -28,6 +28,7 @@
 		4992607C2894114800414280 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992607B2894114800414280 /* Car.swift */; };
 		49930BCE28B35697003DBB22 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49930BCD28B35697003DBB22 /* SignUpViewController.swift */; };
 		4996A47928AB9BD700038BB2 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4996A47828AB9BD700038BB2 /* Brand.swift */; };
+		4998957828B4B11700BA9A7D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4998957728B4B11700BA9A7D /* UIButton+Extension.swift */; };
 		49A0A15028A6939700C6469E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0A14F28A6939700C6469E /* UIImageView+Extension.swift */; };
 		49A9B46828915130006A2C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46728915130006A2C6F /* AppDelegate.swift */; };
 		49A9B46A28915130006A2C6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46928915130006A2C6F /* SceneDelegate.swift */; };
@@ -99,6 +100,7 @@
 		4992607B2894114800414280 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		49930BCD28B35697003DBB22 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4996A47828AB9BD700038BB2 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		4998957728B4B11700BA9A7D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		49A0A14F28A6939700C6469E /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		49A9B46428915130006A2C6F /* CarRental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRental.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A9B46728915130006A2C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				491A574828927E8300D05BB6 /* UIColor+Extension.swift */,
 				49A0A14F28A6939700C6469E /* UIImageView+Extension.swift */,
 				49C71EFE28AFC35A0073ADEE /* UIImage+Extension.swift */,
+				4998957728B4B11700BA9A7D /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				49A9B49228916095006A2C6F /* IconTextField.swift in Sources */,
 				491A575D2892CADA00D05BB6 /* HomeViewController.swift in Sources */,
 				491A57542892B8C100D05BB6 /* KeychainAttrRepresentable.swift in Sources */,
+				4998957828B4B11700BA9A7D /* UIButton+Extension.swift in Sources */,
 				49A9B46C28915130006A2C6F /* SignInViewController.swift in Sources */,
 				49C71F0628AFD1100073ADEE /* IconLabel.swift in Sources */,
 				49BAD4D3289908F90026FC5F /* Transaction.swift in Sources */,
