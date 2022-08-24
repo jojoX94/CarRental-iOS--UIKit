@@ -32,7 +32,7 @@
         <!--Launch View Controller-->
         <scene sceneID="fLq-eO-Nv2">
             <objects>
-                <viewController id="mQe-IL-lDK" customClass="LaunchViewController" customModule="CarRental" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchViewController" id="mQe-IL-lDK" customClass="LaunchViewController" customModule="CarRental" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DvQ-2G-Hrw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,25 +43,35 @@
                                 <color key="backgroundColor" name="primary"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z7F-Nb-N6H">
-                                <rect key="frame" x="84" y="425.5" width="246" height="45"/>
+                                <rect key="frame" x="37" y="255.5" width="340" height="385"/>
                                 <subviews>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_car" translatesAutoresizingMaskIntoConstraints="NO" id="ivs-CF-0MZ">
-                                        <rect key="frame" x="-47" y="0.0" width="340" height="0.0"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_car" translatesAutoresizingMaskIntoConstraints="NO" id="ivs-CF-0MZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="340"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RCARENTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryw-T2-Gjb">
-                                        <rect key="frame" x="0.0" y="0.0" width="246" height="45"/>
+                                        <rect key="frame" x="47" y="340" width="246" height="45"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="40"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AHM-58-ZVi">
+                                <rect key="frame" x="100" y="680.5" width="214" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="oXC-v9-lNv"/>
+                                </constraints>
+                                <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N2i-5J-ROf"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="N2i-5J-ROf" firstAttribute="trailing" secondItem="AHM-58-ZVi" secondAttribute="trailing" constant="100" id="HTf-SD-sa4"/>
+                            <constraint firstItem="AHM-58-ZVi" firstAttribute="leading" secondItem="N2i-5J-ROf" secondAttribute="leading" constant="100" id="V2C-AF-3xc"/>
                             <constraint firstItem="z7F-Nb-N6H" firstAttribute="centerY" secondItem="DvQ-2G-Hrw" secondAttribute="centerY" id="eZj-zq-YQe"/>
                             <constraint firstItem="z7F-Nb-N6H" firstAttribute="centerX" secondItem="DvQ-2G-Hrw" secondAttribute="centerX" id="qZL-Et-ZEX"/>
+                            <constraint firstItem="AHM-58-ZVi" firstAttribute="top" secondItem="z7F-Nb-N6H" secondAttribute="bottom" constant="40" id="tly-Qx-vEK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XoR-Yn-HSW"/>

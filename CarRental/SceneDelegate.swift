@@ -20,19 +20,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        // if user is logged in before
-        if let isFirstLaunch = UserDefaultsHelper.getData(type: Bool.self, forKey: .isFirstLaunch), isFirstLaunch != true {
-            // instantiate the main tab bar controller and set it as root view controller
-            // using the storyboard identifier we set earlier
-            let mainTabBarController = storyboard.instantiateViewController(identifier: "TabBarViewController")
-            window?.rootViewController = mainTabBarController
-        } else {
-            // if user isn't logged in
-            // instantiate the navigation controller and set it as root view controller
-            // using the storyboard identifier we set earlier
-            let signUpViewController = storyboard.instantiateViewController(identifier: "SignUpViewController")
-            window?.rootViewController = signUpViewController
-        }
+        let launchWithProgressBar = storyboard.instantiateViewController(identifier: "LaunchViewController")
+        window?.rootViewController = launchWithProgressBar
+        
+//        // if user is logged in before
+//        if let isFirstLaunch = UserDefaultsHelper.getData(type: Bool.self, forKey: .isFirstLaunch), isFirstLaunch != true {
+//            // instantiate the main tab bar controller and set it as root view controller
+//            // using the storyboard identifier we set earlier
+//            let mainTabBarController = storyboard.instantiateViewController(identifier: "TabBarViewController")
+//            window?.rootViewController = mainTabBarController
+//        } else {
+//            // if user isn't logged in
+//            // instantiate the navigation controller and set it as root view controller
+//            // using the storyboard identifier we set earlier
+//            let signUpViewController = storyboard.instantiateViewController(identifier: "SignUpViewController")
+//            window?.rootViewController = signUpViewController
+//        }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
