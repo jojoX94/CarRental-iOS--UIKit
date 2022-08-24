@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 extension UIView {
     
@@ -85,5 +86,32 @@ extension UIView {
       layer.shadowPath = UIBezierPath(rect: bounds).cgPath
       layer.shouldRasterize = true
       layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
+    
+    func setupSubview(_ subview: UIView, setup: (ConstraintViewDSL) -> Void) {
+        self.addSubview(subview)
+        setup(subview.snp)
+    }
+    
+    func addSwipeGestureAllDirection(action: Selector) {
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: action)
+        swipeLeft.direction = .left
+        swipeLeft.numberOfTouchesRequired = 1
+        self.addGestureRecognizer(swipeLeft)
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: action)
+        swipeRight.direction = .right
+        swipeRight.numberOfTouchesRequired = 1
+        self.addGestureRecognizer(swipeRight)
+
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: action)
+        swipeUp.direction = .up
+        swipeUp.numberOfTouchesRequired = 1
+        self.addGestureRecognizer(swipeUp)
+
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: action)
+        swipeDown.direction = .down
+        swipeDown.numberOfTouchesRequired = 1
+        self.addGestureRecognizer(swipeDown)
     }
 }

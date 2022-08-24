@@ -11,5 +11,5 @@ import UIKit
 struct BrandViewModel {
     var name: String
     var imageName: String
-        
+    var isSelected: Bool
 }

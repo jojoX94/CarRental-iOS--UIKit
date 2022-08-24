@@ -24,7 +24,7 @@ class CarDetailViewController: VC {
     fileprivate func initView() {
         if let data = model {
             img.loadImageUsingCache(withUrl: data.car_image)
-            name.text = data.car_brand.uppercased() + " " + data.car_model.uppercased()
+            name.text = (data.car_brand?.name.uppercased() ?? "unknown") + " " + data.car_model.uppercased()
             price.text = "$" + data.rent_prize + " per days"
         }
         

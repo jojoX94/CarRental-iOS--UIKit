@@ -13,6 +13,8 @@ class IconTextField: UIView {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textField: UITextField!
+
+    fileprivate var view: UIView!
     
     @IBInspectable var secure: Bool {
         get {
@@ -64,9 +66,19 @@ class IconTextField: UIView {
     }
     
     func commonInit(){
-        let viewFromXib = Bundle.main.loadNibNamed("IconTextField", owner: self, options: nil)![0] as! UIView
-        viewFromXib.frame = self.bounds
-        addSubview(viewFromXib)
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
+        let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
+        view.frame = bounds
+        view.autoresizingMask = [
+            UIView.AutoresizingMask.flexibleWidth,
+            UIView.AutoresizingMask.flexibleHeight
+        ]
+        addSubview(view)
+        
+        self.view = view
+        
+        textField.delegate = delegate
     }
 
     

@@ -19,6 +19,12 @@
 		491A57582892BC4B00D05BB6 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A57572892BC4B00D05BB6 /* Defaults.swift */; };
 		491A575B2892BCE200D05BB6 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A575A2892BCE200D05BB6 /* VC.swift */; };
 		491A575D2892CADA00D05BB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491A575C2892CADA00D05BB6 /* HomeViewController.swift */; };
+		491B027F28B4F136003E661B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 491B027E28B4F136003E661B /* SnapKit */; };
+		491B028628B4F1B8003E661B /* SnackBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B028028B4F1B8003E661B /* SnackBarStyle.swift */; };
+		491B028928B4F1B8003E661B /* SnackBar+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B028328B4F1B8003E661B /* SnackBar+Action.swift */; };
+		491B028A28B4F1B8003E661B /* SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B028428B4F1B8003E661B /* SnackBar.swift */; };
+		491B028B28B4F1B8003E661B /* SnackBar+Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B028528B4F1B8003E661B /* SnackBar+Duration.swift */; };
+		491B028D28B4FC1E003E661B /* AppSnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B028C28B4FC1E003E661B /* AppSnackBar.swift */; };
 		499260602893B2CE00414280 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992605F2893B2CE00414280 /* TabBarViewController.swift */; };
 		4992606F2893CC6A00414280 /* BrandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992606E2893CC6A00414280 /* BrandViewModel.swift */; };
 		499260732893D72800414280 /* BrandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499260712893D72800414280 /* BrandCollectionViewCell.swift */; };
@@ -26,11 +32,15 @@
 		4992607828940E8100414280 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992607628940E8100414280 /* CarTableViewCell.swift */; };
 		4992607928940E8100414280 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4992607728940E8100414280 /* CarTableViewCell.xib */; };
 		4992607C2894114800414280 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992607B2894114800414280 /* Car.swift */; };
+		49930BCE28B35697003DBB22 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49930BCD28B35697003DBB22 /* SignUpViewController.swift */; };
+		49938CFA28B604BF003A2688 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 49938CF928B604BF003A2688 /* NVActivityIndicatorView */; };
+		49938CFC28B604BF003A2688 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 49938CFB28B604BF003A2688 /* NVActivityIndicatorViewExtended */; };
 		4996A47928AB9BD700038BB2 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4996A47828AB9BD700038BB2 /* Brand.swift */; };
+		4998957828B4B11700BA9A7D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4998957728B4B11700BA9A7D /* UIButton+Extension.swift */; };
 		49A0A15028A6939700C6469E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0A14F28A6939700C6469E /* UIImageView+Extension.swift */; };
 		49A9B46828915130006A2C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46728915130006A2C6F /* AppDelegate.swift */; };
 		49A9B46A28915130006A2C6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46928915130006A2C6F /* SceneDelegate.swift */; };
-		49A9B46C28915130006A2C6F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46B28915130006A2C6F /* AuthViewController.swift */; };
+		49A9B46C28915130006A2C6F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B46B28915130006A2C6F /* SignInViewController.swift */; };
 		49A9B46F28915131006A2C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B46D28915131006A2C6F /* Main.storyboard */; };
 		49A9B47128915150006A2C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B47028915150006A2C6F /* Assets.xcassets */; };
 		49A9B47428915150006A2C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B47228915150006A2C6F /* LaunchScreen.storyboard */; };
@@ -44,6 +54,7 @@
 		49A9B49228916095006A2C6F /* IconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B49128916095006A2C6F /* IconTextField.swift */; };
 		49A9B4942891644F006A2C6F /* IconTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A9B4932891644F006A2C6F /* IconTextField.xib */; };
 		49A9B4962891768D006A2C6F /* TextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9B4952891768D006A2C6F /* TextFieldViewModel.swift */; };
+		49ABC5D828AF76F300909CA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49ABC5D728AF76F300909CA5 /* GoogleService-Info.plist */; };
 		49BAD4C82898FCF10026FC5F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 49BAD4C72898FCF10026FC5F /* Realm */; };
 		49BAD4CA2898FCF10026FC5F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49BAD4C92898FCF10026FC5F /* RealmSwift */; };
 		49BAD4CD2898FEA50026FC5F /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAD4CC2898FEA50026FC5F /* Customer.swift */; };
@@ -52,6 +63,27 @@
 		49BAD4D3289908F90026FC5F /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAD4D2289908F90026FC5F /* Transaction.swift */; };
 		49BAD4D528990BA70026FC5F /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAD4D428990BA70026FC5F /* Driver.swift */; };
 		49BAD4D728990C0D0026FC5F /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAD4D628990C0D0026FC5F /* Report.swift */; };
+		49C71EE328AFA0870073ADEE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EE228AFA0870073ADEE /* FirebaseAnalytics */; };
+		49C71EE528AFA0870073ADEE /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EE428AFA0870073ADEE /* FirebaseAnalyticsSwift */; };
+		49C71EE728AFA0870073ADEE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EE628AFA0870073ADEE /* FirebaseAuth */; };
+		49C71EE928AFA0870073ADEE /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EE828AFA0870073ADEE /* FirebaseAuthCombine-Community */; };
+		49C71EEB28AFA0870073ADEE /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EEA28AFA0870073ADEE /* FirebaseCrashlytics */; };
+		49C71EED28AFA0870073ADEE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EEC28AFA0870073ADEE /* FirebaseDatabase */; };
+		49C71EEF28AFA0870073ADEE /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EEE28AFA0870073ADEE /* FirebaseDatabaseSwift */; };
+		49C71EF128AFA0870073ADEE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EF028AFA0870073ADEE /* FirebaseFirestore */; };
+		49C71EF328AFA0870073ADEE /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EF228AFA0870073ADEE /* FirebaseFirestoreCombine-Community */; };
+		49C71EF528AFA0870073ADEE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EF428AFA0870073ADEE /* FirebaseFirestoreSwift */; };
+		49C71EF728AFA0870073ADEE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EF628AFA0870073ADEE /* FirebaseMessaging */; };
+		49C71EF928AFA0870073ADEE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EF828AFA0870073ADEE /* FirebaseStorage */; };
+		49C71EFB28AFA0870073ADEE /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 49C71EFA28AFA0870073ADEE /* FirebaseStorageCombine-Community */; };
+		49C71EFD28AFBF290073ADEE /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71EFC28AFBF290073ADEE /* Gradient.swift */; };
+		49C71EFF28AFC35A0073ADEE /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71EFE28AFC35A0073ADEE /* UIImage+Extension.swift */; };
+		49C71F0428AFCC960073ADEE /* IconLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C71F0328AFCC960073ADEE /* IconLabel.xib */; };
+		49C71F0628AFD1100073ADEE /* IconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71F0528AFD1100073ADEE /* IconLabel.swift */; };
+		49C71F0828AFD2D00073ADEE /* IconLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71F0728AFD2D00073ADEE /* IconLabelViewModel.swift */; };
+		49C71F0C28AFD8860073ADEE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C71F0B28AFD8860073ADEE /* SettingViewController.swift */; };
+		49E781A528B3C25E008F6FD0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E781A428B3C25E008F6FD0 /* LoadingView.swift */; };
+		49E781A728B3C26F008F6FD0 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E781A628B3C26F008F6FD0 /* LoadingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +99,11 @@
 		491A57572892BC4B00D05BB6 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		491A575A2892BCE200D05BB6 /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		491A575C2892CADA00D05BB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = CarRental/Pages/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		491B028028B4F1B8003E661B /* SnackBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarStyle.swift; sourceTree = "<group>"; };
+		491B028328B4F1B8003E661B /* SnackBar+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SnackBar+Action.swift"; sourceTree = "<group>"; };
+		491B028428B4F1B8003E661B /* SnackBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
+		491B028528B4F1B8003E661B /* SnackBar+Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SnackBar+Duration.swift"; sourceTree = "<group>"; };
+		491B028C28B4FC1E003E661B /* AppSnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSnackBar.swift; sourceTree = "<group>"; };
 		4992605F2893B2CE00414280 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = CarRental/Pages/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
 		4992606E2893CC6A00414280 /* BrandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewModel.swift; sourceTree = "<group>"; };
 		499260712893D72800414280 /* BrandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -74,12 +111,14 @@
 		4992607628940E8100414280 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		4992607728940E8100414280 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 		4992607B2894114800414280 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		49930BCD28B35697003DBB22 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4996A47828AB9BD700038BB2 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		4998957728B4B11700BA9A7D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		49A0A14F28A6939700C6469E /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		49A9B46428915130006A2C6F /* CarRental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRental.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A9B46728915130006A2C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A9B46928915130006A2C6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49A9B46B28915130006A2C6F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		49A9B46B28915130006A2C6F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		49A9B46E28915131006A2C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49A9B47028915150006A2C6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49A9B47328915150006A2C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,12 +133,21 @@
 		49A9B49128916095006A2C6F /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
 		49A9B4932891644F006A2C6F /* IconTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconTextField.xib; sourceTree = "<group>"; };
 		49A9B4952891768D006A2C6F /* TextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModel.swift; sourceTree = "<group>"; };
+		49ABC5D728AF76F300909CA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49BAD4CC2898FEA50026FC5F /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		49BAD4CE289901670026FC5F /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
 		49BAD4D02899060B0026FC5F /* Rental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rental.swift; sourceTree = "<group>"; };
 		49BAD4D2289908F90026FC5F /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		49BAD4D428990BA70026FC5F /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		49BAD4D628990C0D0026FC5F /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		49C71EFC28AFBF290073ADEE /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		49C71EFE28AFC35A0073ADEE /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		49C71F0328AFCC960073ADEE /* IconLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconLabel.xib; sourceTree = "<group>"; };
+		49C71F0528AFD1100073ADEE /* IconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLabel.swift; sourceTree = "<group>"; };
+		49C71F0728AFD2D00073ADEE /* IconLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLabelViewModel.swift; sourceTree = "<group>"; };
+		49C71F0B28AFD8860073ADEE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		49E781A428B3C25E008F6FD0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		49E781A628B3C26F008F6FD0 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +155,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49C71EE528AFA0870073ADEE /* FirebaseAnalyticsSwift in Frameworks */,
+				491B027F28B4F136003E661B /* SnapKit in Frameworks */,
+				49C71EE928AFA0870073ADEE /* FirebaseAuthCombine-Community in Frameworks */,
+				49C71EE728AFA0870073ADEE /* FirebaseAuth in Frameworks */,
+				49C71EF128AFA0870073ADEE /* FirebaseFirestore in Frameworks */,
+				49C71EEF28AFA0870073ADEE /* FirebaseDatabaseSwift in Frameworks */,
+				49C71EF328AFA0870073ADEE /* FirebaseFirestoreCombine-Community in Frameworks */,
+				49C71EEB28AFA0870073ADEE /* FirebaseCrashlytics in Frameworks */,
+				49C71EFB28AFA0870073ADEE /* FirebaseStorageCombine-Community in Frameworks */,
+				49938CFC28B604BF003A2688 /* NVActivityIndicatorViewExtended in Frameworks */,
 				49BAD4CA2898FCF10026FC5F /* RealmSwift in Frameworks */,
+				49C71EF728AFA0870073ADEE /* FirebaseMessaging in Frameworks */,
 				49BAD4C82898FCF10026FC5F /* Realm in Frameworks */,
+				49C71EED28AFA0870073ADEE /* FirebaseDatabase in Frameworks */,
+				49C71EF928AFA0870073ADEE /* FirebaseStorage in Frameworks */,
+				49C71EE328AFA0870073ADEE /* FirebaseAnalytics in Frameworks */,
+				49938CFA28B604BF003A2688 /* NVActivityIndicatorView in Frameworks */,
+				49C71EF528AFA0870073ADEE /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +194,8 @@
 				491A57432892697400D05BB6 /* UIView+Extension.swift */,
 				491A574828927E8300D05BB6 /* UIColor+Extension.swift */,
 				49A0A14F28A6939700C6469E /* UIImageView+Extension.swift */,
+				49C71EFE28AFC35A0073ADEE /* UIImage+Extension.swift */,
+				4998957728B4B11700BA9A7D /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,6 +224,26 @@
 				491A575A2892BCE200D05BB6 /* VC.swift */,
 			);
 			path = Container;
+			sourceTree = "<group>";
+		};
+		491B025E28B4C71B003E661B /* SnackBar */ = {
+			isa = PBXGroup;
+			children = (
+				491B025F28B4C753003E661B /* Classes */,
+				491B028C28B4FC1E003E661B /* AppSnackBar.swift */,
+			);
+			path = SnackBar;
+			sourceTree = "<group>";
+		};
+		491B025F28B4C753003E661B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				491B028428B4F1B8003E661B /* SnackBar.swift */,
+				491B028328B4F1B8003E661B /* SnackBar+Action.swift */,
+				491B028528B4F1B8003E661B /* SnackBar+Duration.swift */,
+				491B028028B4F1B8003E661B /* SnackBarStyle.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		4992606C2893CC2C00414280 /* Models */ = {
@@ -229,6 +315,7 @@
 		49A9B46628915130006A2C6F /* CarRental */ = {
 			isa = PBXGroup;
 			children = (
+				49ABC5D728AF76F300909CA5 /* GoogleService-Info.plist */,
 				4992606C2893CC2C00414280 /* Models */,
 				491A57592892BCC400D05BB6 /* Container */,
 				491A57502892B76F00D05BB6 /* Utils */,
@@ -241,7 +328,6 @@
 				49A9B47B28915256006A2C6F /* Ressources */,
 				49A9B46728915130006A2C6F /* AppDelegate.swift */,
 				49A9B46928915130006A2C6F /* SceneDelegate.swift */,
-				49A9B46B28915130006A2C6F /* AuthViewController.swift */,
 				49A9B46D28915131006A2C6F /* Main.storyboard */,
 				49A9B47228915150006A2C6F /* LaunchScreen.storyboard */,
 				49A9B47528915150006A2C6F /* Info.plist */,
@@ -276,6 +362,10 @@
 		49A9B485289153A4006A2C6F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				491B025E28B4C71B003E661B /* SnackBar */,
+				49E781A328B3C23B008F6FD0 /* LoadingView */,
+				49C71F0028AFC9E20073ADEE /* IconLabel */,
+				49C71EFC28AFBF290073ADEE /* Gradient.swift */,
 				490E28732897D2B400E45E93 /* CarFeatureView */,
 				4992607528940BF300414280 /* CarTableViewCell */,
 				499260702893D6FF00414280 /* BrandCollectionViewCell */,
@@ -288,10 +378,13 @@
 		49A9B486289153AD006A2C6F /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				49A9B46B28915130006A2C6F /* SignInViewController.swift */,
 				4992605F2893B2CE00414280 /* TabBarViewController.swift */,
 				491A57552892BB9300D05BB6 /* LaunchViewController.swift */,
 				491A575C2892CADA00D05BB6 /* HomeViewController.swift */,
 				490E28782897F93B00E45E93 /* CarDetailViewController.swift */,
+				49C71F0B28AFD8860073ADEE /* SettingViewController.swift */,
+				49930BCD28B35697003DBB22 /* SignUpViewController.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -342,6 +435,25 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		49C71F0028AFC9E20073ADEE /* IconLabel */ = {
+			isa = PBXGroup;
+			children = (
+				49C71F0328AFCC960073ADEE /* IconLabel.xib */,
+				49C71F0528AFD1100073ADEE /* IconLabel.swift */,
+				49C71F0728AFD2D00073ADEE /* IconLabelViewModel.swift */,
+			);
+			path = IconLabel;
+			sourceTree = "<group>";
+		};
+		49E781A328B3C23B008F6FD0 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				49E781A428B3C25E008F6FD0 /* LoadingView.swift */,
+				49E781A628B3C26F008F6FD0 /* LoadingView.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -361,6 +473,22 @@
 			packageProductDependencies = (
 				49BAD4C72898FCF10026FC5F /* Realm */,
 				49BAD4C92898FCF10026FC5F /* RealmSwift */,
+				49C71EE228AFA0870073ADEE /* FirebaseAnalytics */,
+				49C71EE428AFA0870073ADEE /* FirebaseAnalyticsSwift */,
+				49C71EE628AFA0870073ADEE /* FirebaseAuth */,
+				49C71EE828AFA0870073ADEE /* FirebaseAuthCombine-Community */,
+				49C71EEA28AFA0870073ADEE /* FirebaseCrashlytics */,
+				49C71EEC28AFA0870073ADEE /* FirebaseDatabase */,
+				49C71EEE28AFA0870073ADEE /* FirebaseDatabaseSwift */,
+				49C71EF028AFA0870073ADEE /* FirebaseFirestore */,
+				49C71EF228AFA0870073ADEE /* FirebaseFirestoreCombine-Community */,
+				49C71EF428AFA0870073ADEE /* FirebaseFirestoreSwift */,
+				49C71EF628AFA0870073ADEE /* FirebaseMessaging */,
+				49C71EF828AFA0870073ADEE /* FirebaseStorage */,
+				49C71EFA28AFA0870073ADEE /* FirebaseStorageCombine-Community */,
+				491B027E28B4F136003E661B /* SnapKit */,
+				49938CF928B604BF003A2688 /* NVActivityIndicatorView */,
+				49938CFB28B604BF003A2688 /* NVActivityIndicatorViewExtended */,
 			);
 			productName = CarRental;
 			productReference = 49A9B46428915130006A2C6F /* CarRental.app */;
@@ -392,6 +520,9 @@
 			mainGroup = 49A9B45B28915130006A2C6F;
 			packageReferences = (
 				49BAD4C62898FCF10026FC5F /* XCRemoteSwiftPackageReference "realm-swift" */,
+				49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				491B027D28B4F136003E661B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				49938CF828B604BF003A2688 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = 49A9B46528915130006A2C6F /* Products */;
 			projectDirPath = "";
@@ -409,13 +540,16 @@
 			files = (
 				49A9B47428915150006A2C6F /* LaunchScreen.storyboard in Resources */,
 				49A9B48F2891585D006A2C6F /* Nunito-Black.ttf in Resources */,
+				49ABC5D828AF76F300909CA5 /* GoogleService-Info.plist in Resources */,
 				490E28772897D36700E45E93 /* CarFeatureView.xib in Resources */,
 				499260742893D72800414280 /* BrandCollectionViewCell.xib in Resources */,
 				49A9B48128915364006A2C6F /* Poppins-SemiBold.ttf in Resources */,
 				49A9B48428915364006A2C6F /* Poppins-Bold.ttf in Resources */,
+				49C71F0428AFCC960073ADEE /* IconLabel.xib in Resources */,
 				49A9B4942891644F006A2C6F /* IconTextField.xib in Resources */,
 				49A9B48E2891585D006A2C6F /* Nunito-ExtraBold.ttf in Resources */,
 				4992607928940E8100414280 /* CarTableViewCell.xib in Resources */,
+				49E781A728B3C26F008F6FD0 /* LoadingView.xib in Resources */,
 				49A9B47128915150006A2C6F /* Assets.xcassets in Resources */,
 				49A9B48328915364006A2C6F /* Poppins-Regular.ttf in Resources */,
 				49A9B46F28915131006A2C6F /* Main.storyboard in Resources */,
@@ -435,26 +569,39 @@
 				4996A47928AB9BD700038BB2 /* Brand.swift in Sources */,
 				491A574728927DF100D05BB6 /* Button.swift in Sources */,
 				49A0A15028A6939700C6469E /* UIImageView+Extension.swift in Sources */,
+				49C71EFF28AFC35A0073ADEE /* UIImage+Extension.swift in Sources */,
+				49C71F0C28AFD8860073ADEE /* SettingViewController.swift in Sources */,
+				49C71F0828AFD2D00073ADEE /* IconLabelViewModel.swift in Sources */,
 				491A57442892697400D05BB6 /* UIView+Extension.swift in Sources */,
+				49C71EFD28AFBF290073ADEE /* Gradient.swift in Sources */,
 				49BAD4D528990BA70026FC5F /* Driver.swift in Sources */,
 				49A9B4962891768D006A2C6F /* TextFieldViewModel.swift in Sources */,
+				491B028B28B4F1B8003E661B /* SnackBar+Duration.swift in Sources */,
 				490E28752897D34300E45E93 /* CarFeatureView.swift in Sources */,
 				490E28792897F93B00E45E93 /* CarDetailViewController.swift in Sources */,
 				4992606F2893CC6A00414280 /* BrandViewModel.swift in Sources */,
 				49BAD4CD2898FEA50026FC5F /* Customer.swift in Sources */,
 				499260732893D72800414280 /* BrandCollectionViewCell.swift in Sources */,
 				49BAD4D12899060B0026FC5F /* Rental.swift in Sources */,
+				49E781A528B3C25E008F6FD0 /* LoadingView.swift in Sources */,
 				49A9B49228916095006A2C6F /* IconTextField.swift in Sources */,
+				491B028D28B4FC1E003E661B /* AppSnackBar.swift in Sources */,
 				491A575D2892CADA00D05BB6 /* HomeViewController.swift in Sources */,
 				491A57542892B8C100D05BB6 /* KeychainAttrRepresentable.swift in Sources */,
-				49A9B46C28915130006A2C6F /* AuthViewController.swift in Sources */,
+				4998957828B4B11700BA9A7D /* UIButton+Extension.swift in Sources */,
+				49A9B46C28915130006A2C6F /* SignInViewController.swift in Sources */,
+				49C71F0628AFD1100073ADEE /* IconLabel.swift in Sources */,
 				49BAD4D3289908F90026FC5F /* Transaction.swift in Sources */,
 				491A575B2892BCE200D05BB6 /* VC.swift in Sources */,
+				491B028A28B4F1B8003E661B /* SnackBar.swift in Sources */,
 				49A9B46828915130006A2C6F /* AppDelegate.swift in Sources */,
 				491A57562892BB9300D05BB6 /* LaunchViewController.swift in Sources */,
 				491A57582892BC4B00D05BB6 /* Defaults.swift in Sources */,
 				4992607828940E8100414280 /* CarTableViewCell.swift in Sources */,
+				491B028628B4F1B8003E661B /* SnackBarStyle.swift in Sources */,
 				49A9B46A28915130006A2C6F /* SceneDelegate.swift in Sources */,
+				49930BCE28B35697003DBB22 /* SignUpViewController.swift in Sources */,
+				491B028928B4F1B8003E661B /* SnackBar+Action.swift in Sources */,
 				4992607C2894114800414280 /* Car.swift in Sources */,
 				49BAD4D728990C0D0026FC5F /* Report.swift in Sources */,
 				499260602893B2CE00414280 /* TabBarViewController.swift in Sources */,
@@ -681,6 +828,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		491B027D28B4F136003E661B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		49938CF828B604BF003A2688 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		49BAD4C62898FCF10026FC5F /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -689,9 +852,32 @@
 				kind = branch;
 			};
 		};
+		49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		491B027E28B4F136003E661B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 491B027D28B4F136003E661B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		49938CF928B604BF003A2688 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49938CF828B604BF003A2688 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		49938CFB28B604BF003A2688 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49938CF828B604BF003A2688 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
 		49BAD4C72898FCF10026FC5F /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 49BAD4C62898FCF10026FC5F /* XCRemoteSwiftPackageReference "realm-swift" */;
@@ -701,6 +887,71 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 49BAD4C62898FCF10026FC5F /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		49C71EE228AFA0870073ADEE /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		49C71EE428AFA0870073ADEE /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		49C71EE628AFA0870073ADEE /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		49C71EE828AFA0870073ADEE /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		49C71EEA28AFA0870073ADEE /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		49C71EEC28AFA0870073ADEE /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		49C71EEE28AFA0870073ADEE /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		49C71EF028AFA0870073ADEE /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		49C71EF228AFA0870073ADEE /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		49C71EF428AFA0870073ADEE /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		49C71EF628AFA0870073ADEE /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		49C71EF828AFA0870073ADEE /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		49C71EFA28AFA0870073ADEE /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
