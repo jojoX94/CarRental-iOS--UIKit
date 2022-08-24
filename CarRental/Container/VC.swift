@@ -7,25 +7,33 @@
 
 import UIKit
 import FirebaseAuth
+import NVActivityIndicatorView
+import NVActivityIndicatorViewExtended
 
-class VC: UIViewController {
+class VC: UIViewController, NVActivityIndicatorViewable {
     
-    var loadingView: LoadingView? = nil
+    // TODO: OLD LOADING VIEW
+//    var loadingView: LoadingView? = nil
     
     var isLoading: Bool = false {
         didSet {
             if isLoading {
-                loadingView = LoadingView(frame: view.frame)
-                view.addSubview(loadingView!)
+                // TODO: Remove for right code
+                self.startAnimating(nil, message: nil, messageFont: nil, type: .ballPulseSync, color: .white, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.25), textColor: nil, fadeInAnimation: nil)
+                // TODO: OLD LOADING VIEW
+//                loadingView = LoadingView(frame: view.frame)
+//                view.addSubview(loadingView!)
             } else {
-                loadingView?.removeFromSuperview()
+                self.stopAnimating()
+                // TODO: OLD LOADING VIEW
+//                loadingView?.removeFromSuperview()
             }
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     

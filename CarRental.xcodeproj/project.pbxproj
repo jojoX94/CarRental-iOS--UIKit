@@ -33,6 +33,8 @@
 		4992607928940E8100414280 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4992607728940E8100414280 /* CarTableViewCell.xib */; };
 		4992607C2894114800414280 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992607B2894114800414280 /* Car.swift */; };
 		49930BCE28B35697003DBB22 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49930BCD28B35697003DBB22 /* SignUpViewController.swift */; };
+		49938CFA28B604BF003A2688 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 49938CF928B604BF003A2688 /* NVActivityIndicatorView */; };
+		49938CFC28B604BF003A2688 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 49938CFB28B604BF003A2688 /* NVActivityIndicatorViewExtended */; };
 		4996A47928AB9BD700038BB2 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4996A47828AB9BD700038BB2 /* Brand.swift */; };
 		4998957828B4B11700BA9A7D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4998957728B4B11700BA9A7D /* UIButton+Extension.swift */; };
 		49A0A15028A6939700C6469E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0A14F28A6939700C6469E /* UIImageView+Extension.swift */; };
@@ -162,12 +164,14 @@
 				49C71EF328AFA0870073ADEE /* FirebaseFirestoreCombine-Community in Frameworks */,
 				49C71EEB28AFA0870073ADEE /* FirebaseCrashlytics in Frameworks */,
 				49C71EFB28AFA0870073ADEE /* FirebaseStorageCombine-Community in Frameworks */,
+				49938CFC28B604BF003A2688 /* NVActivityIndicatorViewExtended in Frameworks */,
 				49BAD4CA2898FCF10026FC5F /* RealmSwift in Frameworks */,
 				49C71EF728AFA0870073ADEE /* FirebaseMessaging in Frameworks */,
 				49BAD4C82898FCF10026FC5F /* Realm in Frameworks */,
 				49C71EED28AFA0870073ADEE /* FirebaseDatabase in Frameworks */,
 				49C71EF928AFA0870073ADEE /* FirebaseStorage in Frameworks */,
 				49C71EE328AFA0870073ADEE /* FirebaseAnalytics in Frameworks */,
+				49938CFA28B604BF003A2688 /* NVActivityIndicatorView in Frameworks */,
 				49C71EF528AFA0870073ADEE /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +487,8 @@
 				49C71EF828AFA0870073ADEE /* FirebaseStorage */,
 				49C71EFA28AFA0870073ADEE /* FirebaseStorageCombine-Community */,
 				491B027E28B4F136003E661B /* SnapKit */,
+				49938CF928B604BF003A2688 /* NVActivityIndicatorView */,
+				49938CFB28B604BF003A2688 /* NVActivityIndicatorViewExtended */,
 			);
 			productName = CarRental;
 			productReference = 49A9B46428915130006A2C6F /* CarRental.app */;
@@ -516,6 +522,7 @@
 				49BAD4C62898FCF10026FC5F /* XCRemoteSwiftPackageReference "realm-swift" */,
 				49C71EE128AFA0870073ADEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				491B027D28B4F136003E661B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				49938CF828B604BF003A2688 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = 49A9B46528915130006A2C6F /* Products */;
 			projectDirPath = "";
@@ -829,6 +836,14 @@
 				kind = branch;
 			};
 		};
+		49938CF828B604BF003A2688 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		49BAD4C62898FCF10026FC5F /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -852,6 +867,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 491B027D28B4F136003E661B /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		49938CF928B604BF003A2688 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49938CF828B604BF003A2688 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		49938CFB28B604BF003A2688 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49938CF828B604BF003A2688 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
 		};
 		49BAD4C72898FCF10026FC5F /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
