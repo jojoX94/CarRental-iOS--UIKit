@@ -8,9 +8,10 @@
 import UIKit
 
 enum UserDefaultKeys: String, CaseIterable {
- case isAuth
- case notifEnabled
- case pinCode
+    case isFirstLaunch
+    case isAuth
+    case notifEnabled
+    case pinCode
 }
 
 final class UserDefaultsHelper {

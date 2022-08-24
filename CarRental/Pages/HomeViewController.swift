@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class HomeViewController: VC{
     
@@ -42,6 +43,8 @@ class HomeViewController: VC{
     var animateIsDone = false
     var selectedIndex: Int? = nil
     
+    let db = Firestore.firestore()
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -54,7 +57,20 @@ class HomeViewController: VC{
         initView()
         loadBrandsList()
         loadCarList()
-        debugPrint("Debug brand: ", cars[0].car_brand)
+        
+        UserDefaultsHelper.setData(value: false, key: .isFirstLaunch)
+        
+        db.collection("Cars").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    let data = document.data()
+                    debugPrint("name document: ", data["model"]! as? String ?? "")
+                }
+            }
+        }
     }
     
     fileprivate func initView() {
