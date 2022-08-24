@@ -16,9 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
         populateCars()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         // if user is logged in before
         if let loggedUsername = UserDefaults.standard.string(forKey: "username") {
@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // if user isn't logged in
             // instantiate the navigation controller and set it as root view controller
             // using the storyboard identifier we set earlier
-            let signUpViewController = storyboard.instantiateViewController(identifier: "SignUpViewController")
+            let signUpViewController = storyboard.instantiateViewController(identifier: "TabBarViewController")
             window?.rootViewController = signUpViewController
         }
         guard let _ = (scene as? UIWindowScene) else { return }
@@ -80,12 +80,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if cars.count == 0 && brands.count == 0 {
             try! realm.write() {
-                let defaultCars: [Car] = Car.defaultCars.shuffled()
                 let defaultBrands: [Brand] = Brand.defaultBrands
                 
                 for brand in defaultBrands {
                     realm.add(brand)
                 }
+                
+                let defaultCars: [Car] = Car.defaultCars.shuffled()
                 for car in defaultCars {
                     realm.add(car)
                 }

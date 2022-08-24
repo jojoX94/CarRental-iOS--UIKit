@@ -31,6 +31,22 @@ class Brand: Object {
         return nil
     }
     
+    static func getByName(name: String) -> Brand? {
+        do {
+            let realm = try Realm()
+            let object = realm.objects(Brand.self).where {
+                $0.name == name
+            }.first
+            
+            if object != nil {
+                return object
+            }
+        } catch let error as NSError {
+            fatalError(error.localizedDescription)
+        }
+        return nil
+    }
+    
     static let defaultBrands = [
             Brand(name: "lambo", imageUrl: "https://www.carlogos.org/car-logos/lamborghini-logo.png"),
             Brand(name: "benz", imageUrl: "https://www.carlogos.org/car-logos/mercedes-benz-logo.png"),

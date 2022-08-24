@@ -54,6 +54,7 @@ class HomeViewController: VC{
         initView()
         loadBrandsList()
         loadCarList()
+        debugPrint("Debug brand: ", cars[0].car_brand)
     }
     
     fileprivate func initView() {
@@ -184,7 +185,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         collectionView.reloadData()
         
-        carsFiltered = cars.filter({ $0.car_brand.lowercased().contains(brands[indexPath.item].name.lowercased())})
+        carsFiltered = cars.filter({ $0.car_brand?.name.lowercased() == brands[indexPath.item].name.lowercased() })
         
     }
 
@@ -202,7 +203,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CarTableViewCell.identifier, for: indexPath) as! CarTableViewCell
         let car = carsFiltered[indexPath.row]
         
-        cell.configure(model: CarViewModel(type: car.car_model, brand: car.car_brand, price: car.rent_prize, imageName: car.car_image))
+        cell.configure(model: CarViewModel(type: car.car_model, brand: car.car_brand?.name ?? "unknown", price: car.rent_prize, imageName: car.car_image))
         
         return cell
     }
